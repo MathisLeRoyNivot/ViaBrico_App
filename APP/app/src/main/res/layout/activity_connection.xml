@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".ConnectionActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:background="@drawable/content_wrapper"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/form-title"
+            android:text="Connexion"
+            android:textSize="30sp"
+            android:textColor="#353B48"
+            android:letterSpacing="0.2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/form-wrapper"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="3dp"
+            android:id="@+id/line-break"
+            android:background="@drawable/break_line"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/form-title" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:id="@+id/form-wrapper"
+            app:layout_constraintTop_toBottomOf="@+id/line-break"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/email-input"
+                android:background="@drawable/form_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/password-input"
+                android:background="@drawable/form_bg"
+                app:layout_constraintTop_toBottomOf="@+id/email-input"
+                app:layout_constraintBottom_toTopOf="@+id/connect-submit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/connect-submit"
+                android:text="Se connecter"
+                android:textSize="15sp"
+                android:textColor="#353B48"
+                android:textAllCaps="false"
+                android:letterSpacing="0.2"
+                android:paddingHorizontal="12dp"
+                android:background="@drawable/submit_bg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"></Button>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
