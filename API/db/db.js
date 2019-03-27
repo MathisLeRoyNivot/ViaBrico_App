@@ -1,10 +1,17 @@
 // Connexion
-const mongoose = require("mongoose");
-const { privateurl } = require("./privateurl");
+const mysql = require('mysql');
 
-const url = privateurl;
-mongoose.Promise = global.Promise;
-mongoose.connect(url, { useNewUrlParser: true });
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database : "bdd-viabrico"
+});
+
+db.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
 
 // Exportation
-module.exports = { mongoose };
+module.exports = { db };

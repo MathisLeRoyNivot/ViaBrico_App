@@ -1,19 +1,13 @@
 const express = require("express");
-const http = require("http");
 const path = require("path");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 
-const { House } = require("../models/houses");
+const { fournisseur } = require("../models/fournisseur");
 
 const app = express();
 app.use(bodyParser.json());
 
-// --- STYLES DIRECTORY IMPORTATION ---
-const styles = path.join(__dirname, "../" + "styles");
-app.use(express.static(styles));
 
-const ObjectId = mongoose.Types.ObjectId;
 
 // --------- GET METHODS ---------
 // Generating the home page
@@ -22,11 +16,11 @@ const getHomePage = app.get("/", (req, res) => {
   res.sendFile(homePage);
 });
 
-// Houses full
-const getHouses = app.get("/api/houses", (req, res) => {
-  House.find().then(
-    houseList => {
-      res.json(houseList);
+// Fournisseurs
+const getFournisseurs = app.get("/api/fournisseur", (req, res) => {
+  fournisseur.find().then(
+    fournisseurList => {
+      res.json(fournisseurList);
     },
     err => {
       res.status(500).send(err);
@@ -34,44 +28,23 @@ const getHouses = app.get("/api/houses", (req, res) => {
   );
 });
 
-// Houses one
-const getAHouse = app.get("/api/houses/:id", (req, res) => {
-  const id = req.params.id;
-  if (!ObjectId.isValid(id)) {
-    res.status(404).send("not found");
-  } else {
-    House.findById(id)
-      .then(house => {
-        if (!house) {
-          res.status(404).send();
-        } else {
-          res.send(house);
-        }
-      })
-      .catch(err => {
-        res.status(500).send(err);
-      });
-  }
-});
-
 // --------- POST METHODS ---------
 
-// Houses
-const postHouses = app.post("/api/houses", (req, res) => {
-  const newHouse = new House({
+// Fournisseurs
+const postFournisseurs = app.post("/api/fournisseur", (req, res) => {
+  const newFournisseur = new fournisseur({
+    id: req.body.id,
     name: req.body.name,
-    colors: req.body.colors,
-    animal: req.body.animal,
-    trait: req.body.trait,
-    head: req.body.head,
-    ghost: req.body.ghost,
-    commom_room: req.body.commom_room
+    description: req.body.description,
+    address: req.body.address,
+    phone_number: req.body.phone_number,
+    email: req.body.email
   });
-  newHouse
+  newFournisseur
     .save()
-    .then(house => {
-      res.send(house);
-      console.log(house);
+    .then(fournisseur => {
+      res.send(fournisseur);
+      console.log(fournisseur);
     })
     .catch(err => {
       res.status(500).send(err);
@@ -80,15 +53,15 @@ const postHouses = app.post("/api/houses", (req, res) => {
 
 // --------- DELETE METHODS ---------
 
-// Houses
-const deleteHouse = app.delete("/api/houses/:id", (req, res) => {
+// Fournisseurs
+const deleteFournisseur = app.delete("/api/fournisseur/:id", (req, res) => {
   const id = req.params.id;
   if (!ObjectId.isValid(id)) {
     res.status(404).send();
   } else {
-    House.findByIdAndRemove(id)
-      .then(house => {
-        if (!house) {
+    fournisseur.findByIdAndRemove(id)
+      .then(fournisseur => {
+        if (!fournisseur) {
           res.status(404).send();
         } else {
           res.send("This item has been deleted");
@@ -102,27 +75,26 @@ const deleteHouse = app.delete("/api/houses/:id", (req, res) => {
 
 // --------- PUT METHODS ---------
 
-// Houses
-const putHouse = app.put("/api/houses/:id", function(req, res) {
+// Fournisseur
+const putFournisseur = app.put("/api/fournisseur/:id", function(req, res) {
   const id = req.params.id;
   const editedData = {
+    id: req.body.id,
     name: req.body.name,
-    colors: req.body.colors,
-    animal: req.body.animal,
-    trait: req.body.trait,
-    head: req.body.head,
-    ghost: req.body.ghost,
-    commom_room: req.body.commom_room
+    description: req.body.description,
+    address: req.body.address,
+    phone_number: req.body.phone_number,
+    email: req.body.email
   };
   if (!ObjectId.isValid(id)) {
     res.status(404).send();
   } else {
-    House.findByIdAndUpdate(id, editedData)
-      .then(house => {
-        if (!house) {
+    fournisseur.findByIdAndUpdate(id, editedData)
+      .then(fournisseur => {
+        if (!fournisseur) {
           res.status(404).send();
         } else {
-          res.send(house);
+          res.send(fournisseur);
         }
       })
       .catch(err => {
@@ -134,10 +106,9 @@ const putHouse = app.put("/api/houses/:id", function(req, res) {
 // --------- EXPORTING PREVIOUS MODULES ---------
 module.exports = {
   getHomePage,
-  getHouses,
-  getAHouse,
-  postHouses,
-  deleteHouse,
-  putHouse,
+  getFournisseurs,
+  postFournisseurs,
+  deleteFournisseur,
+  putFournisseur,
   app
 };
