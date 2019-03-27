@@ -40,13 +40,10 @@ const postFournisseurs = app.post("/api/fournisseur", (req, res) => {
     phone_number: req.body.phone_number,
     email: req.body.email
   });
-  newFournisseur
-    .save()
-    .then(fournisseur => {
+  newFournisseur.save().then(fournisseur => {
       res.send(fournisseur);
       console.log(fournisseur);
-    })
-    .catch(err => {
+    }).catch(err => {
       res.status(500).send(err);
     });
 });
@@ -59,15 +56,13 @@ const deleteFournisseur = app.delete("/api/fournisseur/:id", (req, res) => {
   if (!ObjectId.isValid(id)) {
     res.status(404).send();
   } else {
-    fournisseur.findByIdAndRemove(id)
-      .then(fournisseur => {
+    fournisseur.findByIdAndRemove(id).then(fournisseur => {
         if (!fournisseur) {
           res.status(404).send();
         } else {
           res.send("This item has been deleted");
         }
-      })
-      .catch(err => {
+      }).catch(err => {
         res.status(500).send(err);
       });
   }

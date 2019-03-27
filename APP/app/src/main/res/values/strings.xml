@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">APP</string>
+    <string name="provider_title">Fournisseurs</string>
 </resources>
