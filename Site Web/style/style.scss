@@ -1,61 +1,188 @@
-@import 'reset.scss';
-html{
+@import "reset.scss";
+
+html,
+body {
     width: 100%;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to bottom right,#84FAB0, #8FD3F4);
-    .index-div-logo{
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+
+    .index-div-logo {
         margin: 20px 0 0 20px;
         background: black;
         width: 150px;
         height: 100px;
     }
-    .index-div-connexion{
+
+    .index-div-connexion {
         display: flex;
         justify-content: center;
-        .index-connexion{
+
+        .index-connexion {
             display: flex;
             align-items: center;
             flex-direction: column;
             margin-top: 20px;
-            background:rgba(255,255,255, 0.3);
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 15px;
             width: 600px;
             height: 400px;
-            .index-title-connexion{
+
+            .index-title-connexion {
                 font-size: 2.5rem;
                 margin-top: 30px;
                 height: 80px;
-                color:  #353B48;
+                color: #353b48;
             }
-            .index-border{
-                width:150px;
-                border-top: solid 2px  #353B48; 
+
+            .index-border {
+                width: 150px;
+                border-top: solid 2px #353b48;
             }
-            .index-email{
+
+            .index-email {
                 margin-top: 25px;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: center; 
+                justify-content: center;
                 align-items: center;
-                input{
+
+                input {
                     width: 70%;
                 }
             }
-            .index-password{
+
+            .index-password {
                 margin-top: 25px;
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: center; 
+                justify-content: center;
                 align-items: center;
-                input{
+
+                input {
                     width: 70%;
                 }
             }
-            
         }
     }
-    
+
+    .list-div-logo {
+        margin: 20px 0 0 20px;
+        background: black;
+        width: 150px;
+        height: 100px;
+    }
+
+    .list-title-container {
+        display: flex;
+        justify-content: center;
+
+        .list-title {
+            color: #353B48;
+            font-size: 40px;
+            margin-bottom: 50px;
+            margin-top: 15px;
+        }
+    }
+
+    .list-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .list-card {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 50%;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+
+            .list-card-line1 {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                color: #353B48;
+
+                p {
+                    margin: 0px 10px 5px 0px;
+                    font-size: 25px;
+                }
+
+                .list-name {
+                    font-weight: bold;
+                }
+
+                a {
+                    color: #353B48;
+
+                    .pen {
+                        font-size: 30px;
+                    }
+                }
+
+
+
+            }
+
+            .list-card-line2 {
+                display: flex;
+                justify-content: flex-start;
+                margin: 10px;
+                color: #353B48;
+
+                p {
+                    font-size: 20px;
+                }
+
+            }
+
+            .list-card-line3 {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                color: #353B48;
+
+                .bin {
+                    color: #E74C3C;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    a {
+        color: #353B48;
+
+        .list-add-div {
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            ;
+
+            .add {
+                font-size: 60px;
+            }
+        }
+    }
+
+
+
 }

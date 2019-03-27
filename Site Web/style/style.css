@@ -52,22 +52,28 @@ table {
   border-spacing: 0;
 }
 
-html {
+html,
+body {
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background: -webkit-gradient(linear, left top, right bottom, from(#84FAB0), to(#8FD3F4));
-  background: linear-gradient(to bottom right, #84FAB0, #8FD3F4);
+  font-family: "Montserrat", sans-serif;
+  background: -webkit-gradient(linear, left top, right bottom, from(#84fab0), to(#8fd3f4));
+  background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 
-html .index-div-logo {
+html .index-div-logo,
+body .index-div-logo {
   margin: 20px 0 0 20px;
   background: black;
   width: 150px;
   height: 100px;
 }
 
-html .index-div-connexion {
+html .index-div-connexion,
+body .index-div-connexion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,7 +82,8 @@ html .index-div-connexion {
           justify-content: center;
 }
 
-html .index-div-connexion .index-connexion {
+html .index-div-connexion .index-connexion,
+body .index-div-connexion .index-connexion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,59 +101,224 @@ html .index-div-connexion .index-connexion {
   height: 400px;
 }
 
-html .index-div-connexion .index-connexion .index-title-connexion {
+html .index-div-connexion .index-connexion .index-title-connexion,
+body .index-div-connexion .index-connexion .index-title-connexion {
   font-size: 2.5rem;
   margin-top: 30px;
   height: 80px;
+  color: #353b48;
+}
+
+html .index-div-connexion .index-connexion .index-border,
+body .index-div-connexion .index-connexion .index-border {
+  width: 150px;
+  border-top: solid 2px #353b48;
+}
+
+html .index-div-connexion .index-connexion .index-email,
+body .index-div-connexion .index-connexion .index-email {
+  margin-top: 25px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .index-div-connexion .index-connexion .index-email input,
+body .index-div-connexion .index-connexion .index-email input {
+  width: 70%;
+}
+
+html .index-div-connexion .index-connexion .index-password,
+body .index-div-connexion .index-connexion .index-password {
+  margin-top: 25px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .index-div-connexion .index-connexion .index-password input,
+body .index-div-connexion .index-connexion .index-password input {
+  width: 70%;
+}
+
+html .list-div-logo,
+body .list-div-logo {
+  margin: 20px 0 0 20px;
+  background: black;
+  width: 150px;
+  height: 100px;
+}
+
+html .list-title-container,
+body .list-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .list-title-container .list-title,
+body .list-title-container .list-title {
+  color: #353B48;
+  font-size: 40px;
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+
+html .list-cards,
+body .list-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .list-cards .list-card,
+body .list-cards .list-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+html .list-cards .list-card .list-card-line1,
+body .list-cards .list-card .list-card-line1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
   color: #353B48;
 }
 
-html .index-div-connexion .index-connexion .index-border {
-  width: 150px;
-  border-top: solid 2px  #353B48;
+html .list-cards .list-card .list-card-line1 p,
+body .list-cards .list-card .list-card-line1 p {
+  margin: 0px 10px 5px 0px;
+  font-size: 25px;
 }
 
-html .index-div-connexion .index-connexion .index-email {
-  margin-top: 25px;
-  width: 100%;
+html .list-cards .list-card .list-card-line1 .list-name,
+body .list-cards .list-card .list-card-line1 .list-name {
+  font-weight: bold;
+}
+
+html .list-cards .list-card .list-card-line1 a,
+body .list-cards .list-card .list-card-line1 a {
+  color: #353B48;
+}
+
+html .list-cards .list-card .list-card-line1 a .pen,
+body .list-cards .list-card .list-card-line1 a .pen {
+  font-size: 30px;
+}
+
+html .list-cards .list-card .list-card-line2,
+body .list-cards .list-card .list-card-line2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 10px;
+  color: #353B48;
+}
+
+html .list-cards .list-card .list-card-line2 p,
+body .list-cards .list-card .list-card-line2 p {
+  font-size: 20px;
+}
+
+html .list-cards .list-card .list-card-line3,
+body .list-cards .list-card .list-card-line3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+  color: #353B48;
+}
+
+html .list-cards .list-card .list-card-line3 .bin,
+body .list-cards .list-card .list-card-line3 .bin {
+  color: #E74C3C;
+  font-size: 30px;
+}
+
+html a,
+body a {
+  color: #353B48;
+}
+
+html a .list-add-div,
+body a .list-add-div {
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
 }
 
-html .index-div-connexion .index-connexion .index-email input {
-  width: 70%;
+html a .list-add-div .add,
+body a .list-add-div .add {
+  font-size: 60px;
 }
-
-html .index-div-connexion .index-connexion .index-password {
-  margin-top: 25px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-html .index-div-connexion .index-connexion .index-password input {
-  width: 70%;
-}
-/*# sourceMappingURL=style.css.map */
