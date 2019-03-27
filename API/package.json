@@ -1,0 +1,27 @@
+{
+  "name": "nodejs_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MathisLeRoyNivot/NodeJS_Project.git"
+  },
+  "author": "Mathis Le Roy-Nivot | Mattéo Lecuit | Henry Maisonneuve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MathisLeRoyNivot/NodeJS_Project/issues"
+  },
+  "homepage": "https://github.com/MathisLeRoyNivot/NodeJS_Project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "path": "^0.12.7",
+    "prompt": "^1.0.0",
+    "yargs": "^13.2.2"
+  }
+}

@@ -1,0 +1,88 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+a.link-github,
+a.link-info {
+    color: black;
+    font-weight: bolder;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+hr {
+    margin-top: 40px;
+    width: 30%;
+}
+
+span img {
+    vertical-align: middle;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+span i {
+    font-size: 1.6em;
+}
+
+.main-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link-github {
+    color: blue;
+}
+
+.section {
+    align-items: center;
+    margin: 50px auto;
+    text-align: center;
+    width: 85%;
+}
+
+.title-method {
+    font-size: 1.5em;
+}
+
+a.btn {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    display: inline-block;
+    font-size: 1.25em;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 3%;
+    text-decoration: none;
+    width: 20%;
+    transition: 0.25s ease-in-out background;
+    transition: 0.25s ease-in-out box-shadow;
+}
+
+.btn-get:hover {
+    background: rgba(108, 92, 231, .75);
+    box-shadow: 0px 0px 10px rgba(0, 0, 00, 0.5);
+}
+
+.methods-info {
+    text-align: center;
+}
+
+.info-text {
+    font-size: 1.25em;
+    font-style: italic;
+}
