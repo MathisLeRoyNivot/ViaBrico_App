@@ -28,6 +28,9 @@ const getFournisseurs = app.get("/api/fournisseur", (req, res) => {
   );
 });
 
+
+
+
 // --------- POST METHODS ---------
 
 // Fournisseurs
@@ -51,6 +54,9 @@ const postFournisseurs = app.post("/api/fournisseur", (req, res) => {
     });
 });
 
+
+
+
 // --------- DELETE METHODS ---------
 
 // Fournisseurs
@@ -72,6 +78,9 @@ const deleteFournisseur = app.delete("/api/fournisseur/:id", (req, res) => {
       });
   }
 });
+
+
+
 
 // --------- PUT METHODS ---------
 
@@ -102,6 +111,8 @@ const putFournisseur = app.put("/api/fournisseur/:id", function(req, res) {
       });
   }
 });
+
+
 
 // --------- EXPORTING PREVIOUS MODULES ---------
 module.exports = {
