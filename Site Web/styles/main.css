@@ -167,7 +167,7 @@ body .list-div-logo {
   margin: 20px 0 0 20px;
   background: black;
   width: 150px;
-  height: 100px;
+  height: 80px;
 }
 
 html .list-title-container,
@@ -240,12 +240,20 @@ body .list-cards .list-card .list-card-line1 p {
 
 html .list-cards .list-card .list-card-line1 .list-name,
 body .list-cards .list-card .list-card-line1 .list-name {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 html .list-cards .list-card .list-card-line1 a,
 body .list-cards .list-card .list-card-line1 a {
   color: #353B48;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+html .list-cards .list-card .list-card-line1 a:hover,
+body .list-cards .list-card .list-card-line1 a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 html .list-cards .list-card .list-card-line1 a .pen,
@@ -286,6 +294,14 @@ html .list-cards .list-card .list-card-line3 .bin,
 body .list-cards .list-card .list-card-line3 .bin {
   color: #E74C3C;
   font-size: 30px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+html .list-cards .list-card .list-card-line3 .bin:hover,
+body .list-cards .list-card .list-card-line3 .bin:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 html a,
