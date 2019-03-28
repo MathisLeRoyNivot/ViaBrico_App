@@ -55,7 +55,6 @@ table {
 html,
 body {
   width: 100%;
-  height: 100%;
   font-family: "Montserrat", sans-serif;
   background: -webkit-gradient(linear, left top, right bottom, from(#84fab0), to(#8fd3f4));
   background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
@@ -69,7 +68,7 @@ body .index-div-logo {
   margin: 20px 0 0 20px;
   background: black;
   width: 150px;
-  height: 100px;
+  height: 80px;
 }
 
 html .index-div-connexion,
@@ -299,8 +298,8 @@ body a .list-add-div {
   background-color: white;
   padding: 10px;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
   display: -webkit-box;
@@ -316,9 +315,226 @@ body a .list-add-div {
   position: fixed;
   bottom: 10px;
   left: 10px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+html a .list-add-div:hover,
+body a .list-add-div:hover {
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+html a .list-add-div:hover .add,
+body a .list-add-div:hover .add {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 html a .list-add-div .add,
 body a .list-add-div .add {
-  font-size: 60px;
+  font-size: 4em;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
+
+html a.back,
+body a.back {
+  color: #353B48;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+}
+
+html .add-goback-btn,
+body .add-goback-btn {
+  border: 1px transparent solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  margin: 15px 0px 0px 20px;
+  position: absolute;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  width: 100px;
+}
+
+html .add-goback-btn:hover,
+body .add-goback-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+html .add-goback-btn p,
+body .add-goback-btn p {
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 30px;
+}
+
+html .add-goback-btn i,
+body .add-goback-btn i {
+  font-size: 2em;
+  line-height: 30px;
+}
+
+html .add-div-connexion,
+body .add-div-connexion {
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 50px  auto;
+  width: 600px;
+}
+
+html .add-div-connexion .add-form,
+body .add-div-connexion .add-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1em;
+  margin: 0 auto;
+  width: 100%;
+}
+
+html .add-div-connexion .add-form .add-title,
+body .add-div-connexion .add-form .add-title {
+  color: #353B48;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 35px 0px;
+  text-align: center;
+}
+
+html .add-div-connexion .add-form .add-separation-form,
+body .add-div-connexion .add-form .add-separation-form {
+  color: #353B48;
+  margin-bottom: 35px;
+  width: 50%;
+}
+
+html .add-div-connexion .add-form i,
+body .add-div-connexion .add-form i {
+  background-color: white;
+  border-radius: 0px 0px 5px 5px;
+  color: #353B48;
+  font-size: 1.6em;
+  line-height: 45px;
+  padding: 0px 15px;
+  position: absolute;
+}
+
+html .add-div-connexion .add-form input[type="email"],
+html .add-div-connexion .add-form input[type="text"],
+html .add-div-connexion .add-form textarea,
+body .add-div-connexion .add-form input[type="email"],
+body .add-div-connexion .add-form input[type="text"],
+body .add-div-connexion .add-form textarea {
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05em;
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+  resize: none;
+  text-indent: 45px;
+  width: 450px;
+}
+
+html .add-div-connexion .add-form input[type="email"]::-webkit-input-placeholder,
+html .add-div-connexion .add-form input[type="text"]::-webkit-input-placeholder,
+html .add-div-connexion .add-form textarea::-webkit-input-placeholder,
+body .add-div-connexion .add-form input[type="email"]::-webkit-input-placeholder,
+body .add-div-connexion .add-form input[type="text"]::-webkit-input-placeholder,
+body .add-div-connexion .add-form textarea::-webkit-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .add-div-connexion .add-form input[type="email"]:-ms-input-placeholder,
+html .add-div-connexion .add-form input[type="text"]:-ms-input-placeholder,
+html .add-div-connexion .add-form textarea:-ms-input-placeholder,
+body .add-div-connexion .add-form input[type="email"]:-ms-input-placeholder,
+body .add-div-connexion .add-form input[type="text"]:-ms-input-placeholder,
+body .add-div-connexion .add-form textarea:-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .add-div-connexion .add-form input[type="email"]::-ms-input-placeholder,
+html .add-div-connexion .add-form input[type="text"]::-ms-input-placeholder,
+html .add-div-connexion .add-form textarea::-ms-input-placeholder,
+body .add-div-connexion .add-form input[type="email"]::-ms-input-placeholder,
+body .add-div-connexion .add-form input[type="text"]::-ms-input-placeholder,
+body .add-div-connexion .add-form textarea::-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .add-div-connexion .add-form input[type="email"]::placeholder,
+html .add-div-connexion .add-form input[type="text"]::placeholder,
+html .add-div-connexion .add-form textarea::placeholder,
+body .add-div-connexion .add-form input[type="email"]::placeholder,
+body .add-div-connexion .add-form input[type="text"]::placeholder,
+body .add-div-connexion .add-form textarea::placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .add-div-connexion .add-form textarea,
+body .add-div-connexion .add-form textarea {
+  height: 110px;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+
+html .add-div-connexion .add-form button[type="submit"],
+body .add-div-connexion .add-form button[type="submit"] {
+  background-color: #84fab0;
+  border: none;
+  border-radius: 5px;
+  color: #353B48;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  height: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  width: 180px;
+}
+/*# sourceMappingURL=main.css.map */
