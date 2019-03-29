@@ -463,6 +463,11 @@ body .add-div-connexion .add-form i {
   position: absolute;
 }
 
+html .add-div-connexion .add-form i.comment,
+body .add-div-connexion .add-form i.comment {
+  margin-top: 1px;
+}
+
 html .add-div-connexion .add-form input[type="email"],
 html .add-div-connexion .add-form input[type="text"],
 html .add-div-connexion .add-form textarea,
