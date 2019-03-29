@@ -540,7 +540,7 @@ html .add-div-connexion .add-form textarea,
 body .add-div-connexion .add-form textarea {
   height: 110px;
   padding-top: 8px;
-  line-height: 1.5;
+  line-height: 1.95;
 }
 
 html .add-div-connexion .add-form button[type="submit"],
