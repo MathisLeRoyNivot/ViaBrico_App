@@ -62,8 +62,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Adrien\Documents\Cours\B2\Projets\Projet_dev\ViaBrico_App\APP\app\src\main\res\password-icon.svg" />
-                                      <entry key="outputName" value="password_icon" />
+                                      <entry key="imageAsset" value="C:\Users\Adrien\Documents\Cours\B2\Projets\Projet_dev\ViaBrico_App\APP\app\src\main\res\message-icon.svg" />
+                                      <entry key="outputName" value="message_icon" />
                                       <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
