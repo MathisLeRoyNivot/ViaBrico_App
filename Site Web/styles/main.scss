@@ -252,7 +252,7 @@ body {
             display: flex;
             align-items: center;
             flex-direction: column;
-            background: white;
+            background-color: rgba(255, 255, 255, .4);
             border: none;
             border-radius: 15px;
             font-size: 1.1em;
@@ -275,7 +275,7 @@ body {
 
             i {
                 background-color: white;
-                border-radius: 0px 0px 5px 5px;
+                border-radius: 5px 0px 0px 5px;
                 color: #353B48;
                 font-size: 1.6em;
                 line-height: 45px;
@@ -316,6 +316,7 @@ body {
                 background-color: #84fab0;
                 border: none;
                 border-radius: 5px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, .15);
                 color: #353B48;
                 cursor: pointer;
                 font-family: "Montserrat", sans-serif;

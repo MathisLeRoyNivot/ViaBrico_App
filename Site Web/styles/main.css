@@ -428,7 +428,7 @@ body .add-div-connexion .add-form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background-color: rgba(255, 255, 255, 0.4);
   border: none;
   border-radius: 15px;
   font-size: 1.1em;
@@ -455,7 +455,7 @@ body .add-div-connexion .add-form .add-separation-form {
 html .add-div-connexion .add-form i,
 body .add-div-connexion .add-form i {
   background-color: white;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 5px 0px 0px 5px;
   color: #353B48;
   font-size: 1.6em;
   line-height: 45px;
@@ -543,6 +543,8 @@ body .add-div-connexion .add-form button[type="submit"] {
   background-color: #84fab0;
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   color: #353B48;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
