@@ -10,8 +10,9 @@ const db = mysql.createConnection({
 
 db.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!");
+    console.log(`\x1b[32m[+] Connection established with the database.\x1b[0m`);
 });
+
 
 // Exportation
 module.exports = { db };
