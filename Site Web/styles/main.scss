@@ -1,0 +1,391 @@
+@import "reset.scss";
+
+html,
+body {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+
+    // ---------------------------------------
+    // Login Page Styles
+    .index-div-logo {
+        margin: 20px 0 0 20px;
+        background: black;
+        width: 150px;
+        height: 80px;
+    }
+
+    .index-div-connexion {
+        display: flex;
+        justify-content: center;
+
+        .index-connexion {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            width: 600px;
+            height: 400px;
+
+            .index-title-connexion {
+                font-size: 2.5rem;
+                margin-top: 30px;
+                height: 80px;
+                color: #353b48;
+            }
+
+            .index-border {
+                width: 150px;
+                border-top: solid 2px #353b48;
+            }
+
+            .index-email{
+                margin-top: 45px;
+                width: 70%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center; 
+                align-items: center;
+                box-shadow: 0px 3px 6px  rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+                border-bottom-left-radius: 10px;
+                .index-icon-mail{
+                    background: white;
+                    height: 42px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 15px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    padding-left: 15px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    outline: none;
+                    &::placeholder{
+                        color: grey;
+                    }
+                    
+                }
+            }
+            .index-password{
+                margin-top: 25px;
+                width: 70%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center; 
+                align-items: center;
+                box-shadow: 0px 3px 6px  rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+                .index-icon-password{
+                    background: white;
+                    height: 42px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 15px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;   
+                }
+                input{
+                    width: 100%;
+                    height: 40px;
+                    border: none;
+                    padding-left: 15px;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    outline: none;
+                    &::placeholder{
+                        color: grey;
+                    }
+                }
+            }
+            .index-button{
+                margin-top: 25px;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 21%;
+                width: 100%;
+                input{
+                    padding: 10px 20px;
+                    color: #353B48;
+                    background: #84FAB0;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    // ---------------------------------------
+    // List Page Styles
+    .list-div-logo {
+        margin: 20px 0 0 20px;
+        background: black;
+        width: 150px;
+        height: 80px;
+    }
+
+    .list-title-container {
+        display: flex;
+        justify-content: center;
+
+        .list-title {
+            color: #353B48;
+            font-size: 40px;
+            margin-bottom: 50px;
+            margin-top: 15px;
+        }
+    }
+
+    .list-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .list-card {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 50%;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+
+            .list-card-line1 {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                color: #353B48;
+
+                p {
+                    margin: 0px 10px 5px 0px;
+                    font-size: 25px;
+                }
+
+                .list-name {
+                    font-weight: bolder;
+                }
+
+                a {
+                    color: #353B48;
+                    transition: all .1s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    .pen {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            .list-card-line2 {
+                display: flex;
+                justify-content: flex-start;
+                margin: 10px;
+                color: #353B48;
+
+                p {
+                    font-size: 20px;
+                }
+            }
+
+            .list-card-line3 {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px;
+                color: #353B48;
+
+                .bin {
+                    color: #E74C3C;
+                    font-size: 30px;
+                    transition: all .1s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                }
+            }
+        }
+    }
+
+    a {
+        color: #353B48;
+
+        .list-add-div {
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            transition: all .1s ease-in-out;
+
+            &:hover {
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, .6);
+                transform: scale(1.05);
+
+                .add {
+                    transform: scale(1.05);
+                }
+            }
+
+            .add {
+                font-size: 4em;
+                transition: all .1s ease-in-out;
+            }
+        }
+    }
+
+    // ---------------------------------------
+    // Adding Page Styles
+    a.back {
+        color: #353B48;
+        position: absolute;
+        text-align: center;
+        text-decoration: none;
+        width: 100px;
+    }
+
+    .add-goback-btn {
+        border: 1px transparent solid;
+        display: flex;
+        height: 30px;
+        margin: 15px 0px 0px 20px;
+        position: absolute;
+        transition: all .1s ease-in-out;
+        width: 100px;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .15);            
+        }
+
+        p {
+            display: inline-block;
+            font-size: 1.2em;
+            line-height: 30px;
+        }
+        i {
+            font-size: 2em;
+            line-height: 30px;
+        }
+    }
+
+    .add-div-connexion {
+        border-radius: 15px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .15);
+        display: flex;
+        justify-content: center;
+        font-family: "Montserrat", sans-serif;
+        margin: 50px  auto;
+        width: 600px;
+
+        .add-form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, .4);
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1em;
+            margin: 0 auto;
+            width: 100%;
+
+            .add-title {
+                color: #353B48;
+                font-size: 1.8em;
+                font-weight: bold;
+                margin: 35px 0px;
+                text-align: center;
+            }
+
+            .add-separation-form {
+                color: #353B48;
+                margin-bottom: 35px;
+                width: 50%;
+            }
+
+            i {
+                background-color: white;
+                border-radius: 5px 0px 0px 5px;
+                color: #353B48;
+                font-size: 1.6em;
+                line-height: 45px;
+                padding: 0px 15px;
+                position: absolute;
+            }
+
+            i.comment {
+                margin-top: 1px;
+            }
+
+            input[type="email"],
+            input[type="text"],
+            textarea {
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, .15);
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.05em;
+                height: 45px;
+                margin-bottom: 20px;
+                padding: 0px 10px;
+                resize: none;
+                text-indent: 45px;
+                width: 450px;
+
+                &::placeholder {
+                    color: rgba(112, 112, 122, .5);
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 1.1em;
+                    letter-spacing: 2px;
+                }
+            }
+
+            textarea {
+                height: 110px;
+                padding-top: 8px;
+                line-height: 1.5;
+            }
+
+            button[type="submit"] {
+                background-color: #84fab0;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, .15);
+                color: #353B48;
+                cursor: pointer;
+                font-family: "Montserrat", sans-serif;
+                font-size: 1em;
+                font-weight: bold;
+                height: 40px;
+                letter-spacing: 2px;
+                margin-bottom: 25px;
+                width: 180px;
+            }
+        }
+    }
+}

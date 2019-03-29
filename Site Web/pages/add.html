@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ViaBrico | Ajouter un fournisseur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div class="index-div-logo">
+        <img src="../img/" alt="Logo" class="index-logo">
+    </div>
+
+    <a class="back" href="javascript:history.back()">
+        <div class="add-goback-btn">
+            <span class="input-group-addon"><i class="material-icons">chevron_left</i></span>
+            <p>Retour</p>
+        </div>
+    </a>
+
+    <div class="add-div-connexion">
+        <form class="add-form" action="">
+
+            <h1 class="add-title">Ajout d'un fournisseur</h1>
+            <hr class="add-separation-form">
+
+            <div class="add-name">
+                <span class="input-group-addon"><i class="material-icons">person</i></span>
+                <input type="text" placeholder="Nom" required/>
+            </div>
+            <div class="add-email">
+                <span class="input-group-addon"><i class="material-icons">alternate_email</i></i></span>
+                <input type="email" placeholder="Email" required/>
+            </div>
+            <div class="add-phone">
+                <span class="input-group-addon"><i class="material-icons">phone</i></span>
+                <input type="text" placeholder="Téléphone" maxlength="15" required/>
+            </div>
+            <div class="add-address">
+                <span class="input-group-addon"><i class="material-icons">place</i></span>
+                <input type="text" placeholder="Adresse" required/>
+            </div>
+            <div class="add-description">
+                <span class="input-group-addon"><i class="material-icons comment">comment</i></span>
+                <textarea name="description" placeholder="Description" required></textarea>
+            </div>
+
+            <button type="submit">Ajouter</button>
+            
+        </form>
+    </div>
+    
+    <!-- Scripts calling -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
