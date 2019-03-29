@@ -7,6 +7,13 @@
     android:background="@drawable/bg_gradient"
     tools:context=".ConnectionActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logo"
+        android:paddingLeft="30dp"
+        android:paddingTop="30dp"/>
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="350dp"
         android:layout_height="300dp"
@@ -52,6 +59,11 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:id="@+id/email-input"
+                android:hint="Email"
+                android:drawableLeft="@drawable/email_icon"
+                android:drawableTint="#353B48"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/form_bg"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -61,6 +73,11 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:id="@+id/password-input"
+                android:hint="Mot de passe"
+                android:drawableLeft="@drawable/password_icon"
+                android:drawableTint="#353B48"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/form_bg"
                 app:layout_constraintTop_toBottomOf="@+id/email-input"
                 app:layout_constraintBottom_toTopOf="@+id/connect-submit"
