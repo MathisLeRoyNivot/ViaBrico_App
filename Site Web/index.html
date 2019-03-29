@@ -15,16 +15,23 @@
         <img src="img/" alt="Logo" class="index-logo">
     </div>
     <div class="index-div-connexion">
-        <div class="index-connexion">
+        <form class="index-connexion" action="" method="get">
             <p class="index-title-connexion">Connexion</p>
             <div class="index-border"></div>
             <div class="index-email">
-                <input type="text" placeholder="email"/>
+                <span class="index-icon-mail">
+                    <i class="material-icons">alternate_email</i> 
+                </span>
+                <input type="text" placeholder="Email"/>
             </div>
             <div class="index-password">
-                <input type="password" placeholder="password"/>
+                <span class="index-icon-password"><i class="material-icons">lock</i></span>
+                <input type="password" placeholder="Mot de passe"/>
             </div>
-        </div>
+            <div class="index-button">
+                <input type="button" class="connecter" value="Se connecter"/>
+            </div>
+        </from>
     </div>
 
 </body>

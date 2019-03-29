@@ -116,8 +116,8 @@ body .index-div-connexion .index-connexion .index-border {
 
 html .index-div-connexion .index-connexion .index-email,
 body .index-div-connexion .index-connexion .index-email {
-  margin-top: 25px;
-  width: 100%;
+  margin-top: 45px;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,17 +131,62 @@ body .index-div-connexion .index-connexion .index-email {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+html .index-div-connexion .index-connexion .index-email .index-icon-mail,
+body .index-div-connexion .index-connexion .index-email .index-icon-mail {
+  background: white;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 html .index-div-connexion .index-connexion .index-email input,
 body .index-div-connexion .index-connexion .index-email input {
-  width: 70%;
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+}
+
+html .index-div-connexion .index-connexion .index-email input::-webkit-input-placeholder,
+body .index-div-connexion .index-connexion .index-email input::-webkit-input-placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-email input:-ms-input-placeholder,
+body .index-div-connexion .index-connexion .index-email input:-ms-input-placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-email input::-ms-input-placeholder,
+body .index-div-connexion .index-connexion .index-email input::-ms-input-placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-email input::placeholder,
+body .index-div-connexion .index-connexion .index-email input::placeholder {
+  color: grey;
 }
 
 html .index-div-connexion .index-connexion .index-password,
 body .index-div-connexion .index-connexion .index-password {
   margin-top: 25px;
-  width: 100%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,11 +200,80 @@ body .index-div-connexion .index-connexion .index-password {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+html .index-div-connexion .index-connexion .index-password .index-icon-password,
+body .index-div-connexion .index-connexion .index-password .index-icon-password {
+  background: white;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 html .index-div-connexion .index-connexion .index-password input,
 body .index-div-connexion .index-connexion .index-password input {
-  width: 70%;
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+}
+
+html .index-div-connexion .index-connexion .index-password input::-webkit-input-placeholder,
+body .index-div-connexion .index-connexion .index-password input::-webkit-input-placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-password input:-ms-input-placeholder,
+body .index-div-connexion .index-connexion .index-password input:-ms-input-placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-password input::-ms-input-placeholder,
+body .index-div-connexion .index-connexion .index-password input::-ms-input-placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-password input::placeholder,
+body .index-div-connexion .index-connexion .index-password input::placeholder {
+  color: grey;
+}
+
+html .index-div-connexion .index-connexion .index-button,
+body .index-div-connexion .index-connexion .index-button {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 21%;
+  width: 100%;
+}
+
+html .index-div-connexion .index-connexion .index-button input,
+body .index-div-connexion .index-connexion .index-button input {
+  padding: 10px 20px;
+  color: #353B48;
+  background: #84FAB0;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  outline: none;
 }
 
 html .list-div-logo,
@@ -482,10 +596,11 @@ body .add-div-connexion .add-form textarea {
   font-size: 1.05em;
   height: 45px;
   margin-bottom: 20px;
-  padding: 0px 10px;
+  padding: 0px 15px;
   resize: none;
   text-indent: 45px;
   width: 450px;
+  outline: none;
 }
 
 html .add-div-connexion .add-form input[type="email"]::-webkit-input-placeholder,
