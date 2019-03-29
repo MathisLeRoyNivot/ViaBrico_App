@@ -1,18 +1,34 @@
 const mysql = require('mysql');
+const express = require('express');
+const app = express();
+var path = require('path');
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'bdd-viabrico'
 });
+
+
+
 connection.connect((err) => {
   if (err) throw err;
-  console.log('Connected!');
+  else{
+    console.log('Connected!');
+  }
 });
 
-con.query('SELECT * FROM fournisseur', (err,rows) => {
-    if(err) throw err;
-  
-    console.log('Data received from Db:\n');
-    console.log(rows);
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server running on port: ${port}`);
 });
+
+const styles = path.join(__dirname, '../' + 'styles');
+app.use(express.static(styles));
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../' + "index.html"));
+});
+

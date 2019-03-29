@@ -352,10 +352,11 @@ body {
                 font-size: 1.05em;
                 height: 45px;
                 margin-bottom: 20px;
-                padding: 0px 10px;
+                padding: 0px 15px;
                 resize: none;
                 text-indent: 45px;
                 width: 450px;
+                outline: none;
 
                 &::placeholder {
                     color: rgba(112, 112, 122, .5);

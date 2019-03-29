@@ -596,10 +596,11 @@ body .add-div-connexion .add-form textarea {
   font-size: 1.05em;
   height: 45px;
   margin-bottom: 20px;
-  padding: 0px 10px;
+  padding: 0px 15px;
   resize: none;
   text-indent: 45px;
   width: 450px;
+  outline: none;
 }
 
 html .add-div-connexion .add-form input[type="email"]::-webkit-input-placeholder,
