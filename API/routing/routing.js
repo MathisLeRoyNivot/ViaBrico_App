@@ -46,6 +46,18 @@ const getFournisseurs = app.get("/api/fournisseur", (req, res) => {
   })
 });
 
+// Fournisseur by ID
+const getOneFournisseur = app.get("/api/fournisseur/:id", (req, res) => {
+  let queryOneFournisseur = 'SELECT * FROM fournisseur WHERE id = ?';
+  
+  db.query(queryOneFournisseur, [req.params.id], (err, row, fields) => {
+    if (err) {
+      res.status(500).send({error: 'Request failed !'})
+    } 
+    res.json(row)
+    console.log(row);
+  })
+});
 
 
 // --------- POST METHODS ---------
@@ -130,6 +142,7 @@ module.exports = {
   getListPage,
   getAddingPage,
   getFournisseurs,
+  getOneFournisseur,
   postFournisseurs,
   deleteFournisseur,
   putFournisseur
