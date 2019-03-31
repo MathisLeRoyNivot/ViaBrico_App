@@ -54,35 +54,41 @@ table {
 
 html,
 body {
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
   background: -webkit-gradient(linear, left top, right bottom, from(#84fab0), to(#8fd3f4));
   background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
-  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
-html .index-div-logo,
-body .index-div-logo {
-  margin: 20px 0 0 20px;
+html .div-logo,
+body .div-logo {
   background: black;
-  width: 150px;
   height: 80px;
+  margin: 20px 0 0 20px;
+  width: 150px;
 }
 
 html .index-div-connexion,
 body .index-div-connexion {
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 100px auto;
+  width: 600px;
 }
 
-html .index-div-connexion .index-connexion,
-body .index-div-connexion .index-connexion {
+html .index-div-connexion .index-form,
+body .index-div-connexion .index-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,195 +99,117 @@ body .index-div-connexion .index-connexion {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.35);
+  border: none;
   border-radius: 15px;
-  width: 600px;
-  height: 400px;
-}
-
-html .index-div-connexion .index-connexion .index-title-connexion,
-body .index-div-connexion .index-connexion .index-title-connexion {
-  font-size: 2.5rem;
-  margin-top: 30px;
-  height: 80px;
-  color: #353b48;
-}
-
-html .index-div-connexion .index-connexion .index-border,
-body .index-div-connexion .index-connexion .index-border {
-  width: 150px;
-  border-top: solid 2px #353b48;
-}
-
-html .index-div-connexion .index-connexion .index-email,
-body .index-div-connexion .index-connexion .index-email {
-  margin-top: 45px;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-html .index-div-connexion .index-connexion .index-email .index-icon-mail,
-body .index-div-connexion .index-connexion .index-email .index-icon-mail {
-  background: white;
-  height: 42px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 15px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-html .index-div-connexion .index-connexion .index-email input,
-body .index-div-connexion .index-connexion .index-email input {
-  width: 100%;
-  height: 40px;
-  border: none;
-  padding-left: 15px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  outline: none;
-}
-
-html .index-div-connexion .index-connexion .index-email input::-webkit-input-placeholder,
-body .index-div-connexion .index-connexion .index-email input::-webkit-input-placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-email input:-ms-input-placeholder,
-body .index-div-connexion .index-connexion .index-email input:-ms-input-placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-email input::-ms-input-placeholder,
-body .index-div-connexion .index-connexion .index-email input::-ms-input-placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-email input::placeholder,
-body .index-div-connexion .index-connexion .index-email input::placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-password,
-body .index-div-connexion .index-connexion .index-password {
-  margin-top: 25px;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-}
-
-html .index-div-connexion .index-connexion .index-password .index-icon-password,
-body .index-div-connexion .index-connexion .index-password .index-icon-password {
-  background: white;
-  height: 42px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 15px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-html .index-div-connexion .index-connexion .index-password input,
-body .index-div-connexion .index-connexion .index-password input {
-  width: 100%;
-  height: 40px;
-  border: none;
-  padding-left: 15px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  outline: none;
-}
-
-html .index-div-connexion .index-connexion .index-password input::-webkit-input-placeholder,
-body .index-div-connexion .index-connexion .index-password input::-webkit-input-placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-password input:-ms-input-placeholder,
-body .index-div-connexion .index-connexion .index-password input:-ms-input-placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-password input::-ms-input-placeholder,
-body .index-div-connexion .index-connexion .index-password input::-ms-input-placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-password input::placeholder,
-body .index-div-connexion .index-connexion .index-password input::placeholder {
-  color: grey;
-}
-
-html .index-div-connexion .index-connexion .index-button,
-body .index-div-connexion .index-connexion .index-button {
-  margin-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 21%;
+  font-size: 1.1em;
+  margin: 0 auto;
   width: 100%;
 }
 
-html .index-div-connexion .index-connexion .index-button input,
-body .index-div-connexion .index-connexion .index-button input {
-  padding: 10px 20px;
+html .index-div-connexion .index-form .index-title,
+body .index-div-connexion .index-form .index-title {
   color: #353B48;
-  background: #84FAB0;
-  border: none;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-  outline: none;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 35px 0px;
+  text-align: center;
 }
 
-html .list-div-logo,
-body .list-div-logo {
-  margin: 20px 0 0 20px;
-  background: black;
-  width: 150px;
-  height: 80px;
+html .index-div-connexion .index-form .index-separation-form,
+body .index-div-connexion .index-form .index-separation-form {
+  color: #353B48;
+  margin-bottom: 35px;
+  width: 50%;
+}
+
+html .index-div-connexion .index-form i,
+body .index-div-connexion .index-form i {
+  background-color: white;
+  border-radius: 7px 0px 0px 7px;
+  color: #353B48;
+  font-size: 1.6em;
+  line-height: 45px;
+  padding: 0px 15px;
+  position: absolute;
+}
+
+html .index-div-connexion .index-form input[type="email"],
+html .index-div-connexion .index-form input[type="password"],
+body .index-div-connexion .index-form input[type="email"],
+body .index-div-connexion .index-form input[type="password"] {
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05em;
+  height: 45px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 15px;
+  resize: none;
+  text-indent: 45px;
+  width: 450px;
+}
+
+html .index-div-connexion .index-form input[type="email"]::-webkit-input-placeholder,
+html .index-div-connexion .index-form input[type="password"]::-webkit-input-placeholder,
+body .index-div-connexion .index-form input[type="email"]::-webkit-input-placeholder,
+body .index-div-connexion .index-form input[type="password"]::-webkit-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .index-div-connexion .index-form input[type="email"]:-ms-input-placeholder,
+html .index-div-connexion .index-form input[type="password"]:-ms-input-placeholder,
+body .index-div-connexion .index-form input[type="email"]:-ms-input-placeholder,
+body .index-div-connexion .index-form input[type="password"]:-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .index-div-connexion .index-form input[type="email"]::-ms-input-placeholder,
+html .index-div-connexion .index-form input[type="password"]::-ms-input-placeholder,
+body .index-div-connexion .index-form input[type="email"]::-ms-input-placeholder,
+body .index-div-connexion .index-form input[type="password"]::-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .index-div-connexion .index-form input[type="email"]::placeholder,
+html .index-div-connexion .index-form input[type="password"]::placeholder,
+body .index-div-connexion .index-form input[type="email"]::placeholder,
+body .index-div-connexion .index-form input[type="password"]::placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .index-div-connexion .index-form button[type="submit"],
+body .index-div-connexion .index-form button[type="submit"] {
+  background-color: #84fab0;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  color: #353B48;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  height: 40px;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 180px;
 }
 
 html .list-title-container,
@@ -297,6 +225,7 @@ body .list-title-container {
 html .list-title-container .list-title,
 body .list-title-container .list-title {
   color: #353B48;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   margin-bottom: 50px;
   margin-top: 15px;
@@ -304,6 +233,9 @@ body .list-title-container .list-title {
 
 html .list-cards,
 body .list-cards {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,13 +243,14 @@ body .list-cards {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 html .list-cards .list-card,
 body .list-cards .list-card {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,17 +258,14 @@ body .list-cards .list-card {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
-  width: 50%;
-  border-radius: 10px;
-  padding: 15px;
   margin: 15px;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  width: 50%;
 }
 
 html .list-cards .list-card .list-card-line1,
 body .list-cards .list-card .list-card-line1 {
+  color: #353B48;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,7 +273,6 @@ body .list-cards .list-card .list-card-line1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 10px;
-  color: #353B48;
 }
 
 html .list-cards .list-card .list-card-line1 p,
@@ -425,28 +354,28 @@ body a {
 
 html a .list-add-div,
 body a .list-add-div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
-  padding: 10px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  bottom: 10px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 60px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px;
-  position: fixed;
-  bottom: 10px;
   left: 10px;
+  margin: 10px;
+  padding: 10px;
+  position: fixed;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
+  width: 60px;
 }
 
 html a .list-add-div:hover,
@@ -542,7 +471,7 @@ body .add-div-connexion .add-form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.35);
   border: none;
   border-radius: 15px;
   font-size: 1.1em;
@@ -553,7 +482,7 @@ body .add-div-connexion .add-form {
 html .add-div-connexion .add-form .add-title,
 body .add-div-connexion .add-form .add-title {
   color: #353B48;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
   margin: 35px 0px;
   text-align: center;
@@ -569,7 +498,7 @@ body .add-div-connexion .add-form .add-separation-form {
 html .add-div-connexion .add-form i,
 body .add-div-connexion .add-form i {
   background-color: white;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 7px 0px 0px 7px;
   color: #353B48;
   font-size: 1.6em;
   line-height: 45px;
@@ -589,18 +518,18 @@ body .add-div-connexion .add-form input[type="email"],
 body .add-div-connexion .add-form input[type="text"],
 body .add-div-connexion .add-form textarea {
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   font-family: "Montserrat", sans-serif;
   font-size: 1.05em;
   height: 45px;
   margin-bottom: 20px;
+  outline: none;
   padding: 0px 15px;
   resize: none;
   text-indent: 45px;
   width: 450px;
-  outline: none;
 }
 
 html .add-div-connexion .add-form input[type="email"]::-webkit-input-placeholder,
@@ -662,7 +591,7 @@ html .add-div-connexion .add-form button[type="submit"],
 body .add-div-connexion .add-form button[type="submit"] {
   background-color: #84fab0;
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
   color: #353B48;
@@ -671,7 +600,7 @@ body .add-div-connexion .add-form button[type="submit"] {
   font-size: 1em;
   font-weight: bold;
   height: 40px;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   margin-bottom: 25px;
   width: 180px;
 }

@@ -12,7 +12,7 @@ http.Server(routing.app);
 
 routing.app.listen(port, () => {
     routing.getHomePage;
-    console.log(`Server is running on port : \x1b[36m${port}\x1b[0m\nYou can routing to the server at the following address : \x1b[36mhttp://localhost:${port}/\x1b[0m `);
+    console.log(`\x1b[32m[+]\x1b[0m Server is running on port : \x1b[36m${port}\x1b[0m\n\x1b[32m[+]\x1b[0m You can routing to the server at the following address : \x1b[36mhttp://localhost:${port}/\x1b[0m `);
 });
 
 module.exports = {};
