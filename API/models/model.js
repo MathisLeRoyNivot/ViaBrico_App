@@ -1,21 +1,21 @@
-const sql = require('./db.js');
+const db = require('./db.js');
 
 //Fournisseur object constructor
-const Fournisseur = function (fournisseur) {
+const Provider = function (fournisseur) {
     this.name = fournisseur.name;
-    this.description = fournisseur.description;
-    this.address = fournisseur.address;
-    this.phone_number = fournisseur.phone_number;
     this.email = fournisseur.email;
+    this.phone_number = fournisseur.phone_number;
+    this.address = fournisseur.address;
+    this.description = fournisseur.description;
 };
-Fournisseur.createFournisseur = function createUser(newFournisseur, result) {
-    sql.query("INSERT INTO fournisseur set ?", newFournisseur, function (err, res) {
+
+Provider.createProvider = function createUser(newFournisseur, result) {
+    db.query("INSERT INTO fournisseur set ?", newFournisseur, function (err, res) {
 
         if (err) {
             console.log("error: ", err);
             result(err, null);
-        }
-        else {
+        } else {
             console.log(res.insertId);
             result(null, res.insertId);
         }
@@ -33,43 +33,38 @@ Fournisseur.createFournisseur = function createUser(newFournisseur, result) {
 //         }
 //     });
 // };
-Fournisseur.getAllFournisseur = function getAllFournisseur(result) {
-    sql.query("Select * from fournisseur", function (err, res) {
+Provider.getAllProvider = function getAllProvider(result) {
+    db.query("Select * from fournisseur", function (err, res) {
 
         if (err) {
             console.log("error: ", err);
             result(null, err);
-        }
-        else {
+        } else {
             console.log('fournisseurs : ', res);
-
             result(null, res);
         }
     });
 };
-Fournisseur.updateById = function (id, fournisseur, result) {
-    sql.query("UPDATE fournisseur SET name = ? WHERE id = ?", [fournisseur.name, id], function (err, res) {
+Provider.updateById = function (id, fournisseur, result) {
+    db.query("UPDATE fournisseur SET name = ? WHERE id = ?", [fournisseur.name, id], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
-        }
-        else {
+        } else {
             result(null, res);
         }
     });
 };
-Fournisseur.remove = function (id, result) {
-    sql.query("DELETE FROM fournisseur WHERE id = ?", [id], function (err, res) {
+Provider.remove = function (id, result) {
+    db.query("DELETE FROM fournisseur WHERE id = ?", [id], function (err, res) {
 
         if (err) {
             console.log("error: ", err);
             result(null, err);
-        }
-        else {
-
+        } else {
             result(null, res);
         }
     });
 };
 
-module.exports = Fournisseur;
+module.exports = Provider;

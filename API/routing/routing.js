@@ -31,18 +31,6 @@ const getAddingPage = app.get("/fournisseurs/ajout", (req, res) => {
   res.sendFile(addPage);
 });
 
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
-const postNewFournisseur = app.post('/add',urlencodedParser, function(req, res, next) {
-  console.log(req.body);
-  db.connect(function(err) {
-    const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
-    db.query(insertProvider, function(err, result)  {
-      if(err) throw err;
-      console.log(`\x1b[32m[+] New provider inserted !\x1b[0m`);
-    });
-  });
-});
-
 // Fournisseurs
 const getFournisseurs = app.get("/api/fournisseur", (req, res) => {
   let queryFournisseur = 'SELECT * FROM fournisseur';
@@ -74,24 +62,36 @@ const getOneFournisseur = app.get("/api/fournisseur/:id", (req, res) => {
 
 // --------- POST METHODS ---------
 // Fournisseurs
-const postFournisseurs = app.post("/api/fournisseur", (req, res) => {
-  const newFournisseur = new fournisseur({
-    id: req.body.id,
-    name: req.body.name,
-    description: req.body.description,
-    address: req.body.address,
-    phone_number: req.body.phone_number,
-    email: req.body.email
-  });
-  newFournisseur.save().then(fournisseur => {
-      res.send(fournisseur);
-      console.log(fournisseur);
-    }).catch(err => {
-      res.status(500).send(err);
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const postNewFournisseur = app.post('/add',urlencodedParser, function(req, res, next) {
+  console.log(req.body);
+  db.connect(function(err) {
+    const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
+    db.query(insertProvider, function(err, result)  {
+      if(err) {
+        console.log(`\x1b[32m[-] Error when inserted new provider !\x1b[0m`);
+        throw err;
+      } else console.log(`\x1b[32m[+] New provider inserted !\x1b[0m`);
     });
+  });
 });
 
-
+// const postFournisseurs = app.post("/api/fournisseur", (req, res) => {
+//   const newFournisseur = new fournisseur({
+//     id: req.body.id,
+//     name: req.body.name,
+//     description: req.body.description,
+//     address: req.body.address,
+//     phone_number: req.body.phone_number,
+//     email: req.body.email
+//   });
+//   newFournisseur.save().then(fournisseur => {
+//       res.send(fournisseur);
+//       console.log(fournisseur);
+//     }).catch(err => {
+//       res.status(500).send(err);
+//     });
+// });
 
 
 // --------- DELETE METHODS ---------
@@ -156,7 +156,6 @@ module.exports = {
   getFournisseurs,
   getOneFournisseur,
   postNewFournisseur,
-  postFournisseurs,
   deleteFournisseur,
   putFournisseur
 };

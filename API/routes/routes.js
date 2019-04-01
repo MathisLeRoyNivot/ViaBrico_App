@@ -3,14 +3,13 @@ module.exports = function (app) {
 
     // todoList Routes
     app.route('/fournisseurs')
-        .get(todoList.list_all_fournisseurs)
-        .post(todoList.create_a_fournisseur);
+        .get(todoList.listAllProviders)
+        .post(todoList.createProvider);
 
     app.route('/fournisseurs/:fournisseurId')
         //.get(todoList.read_a_fournisseur)
-        .put(todoList.update_a_fournisseur)
-        .delete(todoList.delete_a_fournisseur);
-
+        .put(todoList.updateProvider)
+        .delete(todoList.deleteProvider);
 };
 
 
