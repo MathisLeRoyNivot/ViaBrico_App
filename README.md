@@ -11,9 +11,10 @@
 - [ ] **Back end :**
 	- [ ] ***Node.JS API***
 		- [x] GET Methods
-		- [ ] POST Methods
+		- [x] POST Methods
 		- [ ] DELETE Methods
 		- [ ] PUT Methods
+		- [x] Adding provider Back side
 	- [x] ***MySQL Database***
 		- [x] Table : membre
 		- [x] Table : fournisseur

@@ -52,7 +52,7 @@ INSERT INTO `compte` (`id`, `login`, `password`) VALUES
 
 DROP TABLE IF EXISTS `fournisseur`;
 CREATE TABLE IF NOT EXISTS `fournisseur` (
-  `id` int(20) NOT NULL,
+  `id` int(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `description` varchar(500) NOT NULL,
   `address` varchar(200) NOT NULL,

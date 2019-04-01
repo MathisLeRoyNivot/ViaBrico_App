@@ -31,6 +31,18 @@ const getAddingPage = app.get("/fournisseurs/ajout", (req, res) => {
   res.sendFile(addPage);
 });
 
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const postNewFournisseur = app.post('/add',urlencodedParser, function(req, res, next) {
+  console.log(req.body);
+  db.connect(function(err) {
+    const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
+    db.query(insertProvider, function(err, result)  {
+      if(err) throw err;
+      console.log(`\x1b[32m[+] New provider inserted !\x1b[0m`);
+    });
+  });
+});
+
 // Fournisseurs
 const getFournisseurs = app.get("/api/fournisseur", (req, res) => {
   let queryFournisseur = 'SELECT * FROM fournisseur';
@@ -143,6 +155,7 @@ module.exports = {
   getAddingPage,
   getFournisseurs,
   getOneFournisseur,
+  postNewFournisseur,
   postFournisseurs,
   deleteFournisseur,
   putFournisseur

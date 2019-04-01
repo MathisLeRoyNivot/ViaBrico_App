@@ -13,15 +13,12 @@ const connection = mysql.createConnection({
   database: 'bdd-viabrico'
 });
 
-
-
 connection.connect((err) => {
   if (err) throw err;
   else{
     console.log('Connected!');
   }
 });
-
 
 const port = 3000;
 app.listen(port, () => {
@@ -73,4 +70,3 @@ window.onload = function fournisseurListeTemplate(getFournisseurs) {
 document.getElementById("list-cards").innerHTML = `
   ${queryFournisseur.map(fournisseurListeTemplate).join("")}
 `;
-
