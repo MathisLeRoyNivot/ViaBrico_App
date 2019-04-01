@@ -32,7 +32,7 @@ USE `bdd-viabrico`;
 
 DROP TABLE IF EXISTS `compte`;
 CREATE TABLE IF NOT EXISTS `compte` (
-  `id` int(50) NOT NULL,
+  `id` int(50) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `login` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
