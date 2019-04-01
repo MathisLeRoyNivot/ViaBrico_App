@@ -1,38 +1,40 @@
-// db.query(queryFournisseur, (err,rows) => {
-//     if(err) throw err;
-//     console.log('Data received from Db:\n');
-//     console.log(rows);
 
-//     rows.forEach( (row) => {
-//         console.log(`${row.name}, ${row.address}, ${row.email}, ${row.description},`);
-//     });
-// });
+const app = document.getElementById('list-cards')
 
-window.onload = function fournisseurListeTemplate(getFournisseurs) {
-    return `
-    <div class="list-card">
-        <div class="list-card-line1">
-            <p class="list-name">${name}</p>
-            <p>${email}</p>
-            <p>${phone_number}</p>
-            <a href="#">
-                <i class="material-icons pen">edit</i>
-            </a>
-        </div>
-        <div class="list-card-line2">
-            <p>${address}</p>
-        </div>
-        <div class="list-card-line3">
-            <p>${description}</p>
-            <a href="#">
-                <i class="material-icons bin">delete</i>
-            </a>
-        </div>
-    </div>
-    `;
+const container = document.createElement('div')
+container.setAttribute('class', 'list-card')
+
+app.appendChild(container)
+
+const request = new XMLHttpRequest()
+request.open('GET', 'http://localhost:3000/fournisseurs', true)
+request.onload = function() {
+  // Begin accessing JSON data here
+  const data = JSON.parse(this.response)
+  if (request.status >= 200 && request.status < 400) {
+    data.forEach(fournisseur => {
+      const card = document.createElement('div')
+      card.setAttribute('class', 'list-card-line1')
+
+      const p1 = document.createElement('p')
+      p1.setAttribute('class', 'list-name')
+      p1.textContent = fournisseur.name
+
+      const p2 = document.createElement('p')
+      p2.setAttribute('class', 'list-email')
+      p2.textContent = fournisseur.email
+
+      
+
+      container.appendChild(card)
+      card.appendChild(p1)
+      card.appendChild(p2)
+    })
+  } else {
+    const errorMessage = document.createElement('marquee')
+    errorMessage.textContent = `Gah, it's not working!`
+    app.appendChild(errorMessage)
+  }
 }
 
-document.getElementById("list-cards").innerHTML = `
-  ${queryFournisseur.map(fournisseurListeTemplate).join("")}
-`;
-
+request.send()
