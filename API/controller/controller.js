@@ -1,35 +1,25 @@
-const Fournisseur = require('../model/model.js');
+const Provider = require('../models/model');
 
-
-exports.list_all_fournisseurs = function(req, res) {
-  Fournisseur.getAllFournisseur(function(err, fournisseur) {
-
+const listAllProviders = function(req, res) {
+  Provider.getAllProvider(function(err, fournisseur) {
     console.log('controller')
-    if (err)
-      res.send(err);
-      console.log('res', fournisseur);
+    if (err) res.send(err);
+    console.log('res', fournisseur);
     res.send(fournisseur);
   });
 };
 
 
 
-exports.create_a_fournisseur = function(req, res) {
+const createProvider = function(req, res) {
   const new_fournisseur = new Fournisseur(req.body);
-
   //handles null error 
-   if(!new_fournisseur.name || !new_fournisseur.description){
-
-            res.status(400).send({ error:true, message: 'Please provide name/description' });
-
-        }
-else{
-  
-  Fournisseur.createFournisseur(new_fournisseur, function(err, fournisseur) {
-    
-    if (err)
-      res.send(err);
-    res.json(fournisseur);
+  if(!new_fournisseur.name || !new_fournisseur.description){
+    res.status(400).send({ error:true, message: 'Please provide name/description' });
+  } else {
+    Fournisseur.createFournisseur(new_fournisseur, function(err, fournisseur) {
+      if (err) res.send(err);
+      res.json(fournisseur);
   });
 }
 };
@@ -44,21 +34,24 @@ else{
 // };
 
 
-exports.update_a_fournisseur = function(req, res) {
-  Fournisseur.updateById(req.params.fournisseurId, new Fournisseur(req.body), function(err, fournisseur) {
-    if (err)
-      res.send(err);
+const updateProvider = function(req, res) {
+  Provider.updateById(req.params.fournisseurId, new Fournisseur(req.body), function(err, fournisseur) {
+    if (err) res.send(err);
     res.json(fournisseur);
   });
 };
 
 
-exports.delete_a_fournisseur = function(req, res) {
-
-
-  Fournisseur.remove( req.params.fournisseurId, function(err, fournisseur) {
-    if (err)
-      res.send(err);
+const deleteProvider = function(req, res) {
+  Provider.remove( req.params.fournisseurId, function(err, fournisseur) {
+    if (err) res.send(err);
     res.json({ message: 'Fournisseur successfully deleted' });
   });
 };
+
+module.exports = {
+  listAllProviders,
+  createProvider,
+  updateProvider,
+  deleteProvider
+}

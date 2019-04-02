@@ -23,26 +23,26 @@
     </a>
 
     <div class="add-div-connexion">
-        <form class="add-form" action="">
+        <form class="add-form" action="/add" method="POST">
 
             <h1 class="add-title">Ajout d'un fournisseur</h1>
             <hr class="add-separation-form">
 
             <div class="add-name">
                 <span class="input-group-addon"><i class="material-icons">person</i></span>
-                <input type="text" placeholder="Nom" required/>
+                <input type="text" name="name" placeholder="Nom" required/>
             </div>
             <div class="add-email">
                 <span class="input-group-addon"><i class="material-icons">alternate_email</i></i></span>
-                <input type="email" placeholder="Email" required/>
+                <input type="email" name="email" placeholder="Email" required/>
             </div>
             <div class="add-phone">
                 <span class="input-group-addon"><i class="material-icons">phone</i></span>
-                <input type="text" placeholder="Téléphone" maxlength="15" required/>
+                <input type="text" name="phonenumber" placeholder="Téléphone" maxlength="15" required/>
             </div>
             <div class="add-address">
                 <span class="input-group-addon"><i class="material-icons">place</i></span>
-                <input type="text" placeholder="Adresse" required/>
+                <input type="text" name="address" placeholder="Adresse" required/>
             </div>
             <div class="add-description">
                 <span class="input-group-addon"><i class="material-icons comment">comment</i></span>
