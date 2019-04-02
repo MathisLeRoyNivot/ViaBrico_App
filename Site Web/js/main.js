@@ -24,11 +24,18 @@ request.onload = function() {
       p2.setAttribute('class', 'list-email')
       p2.textContent = fournisseur.email
 
+      const p3 = document.createElement('p')
+      p3.setAttribute('class', 'list-phone')
+      p3.textContent = fournisseur.phone_number
+
+      const a1 = document.createElement('a')
+      a1.setAttribute('href', '#')
       
 
       container.appendChild(card)
       card.appendChild(p1)
       card.appendChild(p2)
+      card.appendChild(p3)
     })
   } else {
     const errorMessage = document.createElement('marquee')
