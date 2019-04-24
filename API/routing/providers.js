@@ -8,6 +8,7 @@ app.post('/add',urlencodedParser, function(req, res, next) {
     console.log(req.body.phonenumber);
     console.log(req.body.address);
     console.log(req.body.description);
+    
     db.connect(function(err) {
         if (err) throw  err;
         console.log("connected");

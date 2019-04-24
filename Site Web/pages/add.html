@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ViaBrico | Ajouter un fournisseur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -23,36 +23,38 @@
     </a>
 
     <div class="add-div-connexion">
-        <form class="add-form" action="/add" method="POST">
+        <form class="add-form" method="POST">
 
             <h1 class="add-title">Ajout d'un fournisseur</h1>
             <hr class="add-separation-form">
 
             <div class="add-name">
                 <span class="input-group-addon"><i class="material-icons">person</i></span>
-                <input type="text" name="name" placeholder="Nom" required/>
+                <input type="text" id="name" name="name" placeholder="Nom" required/>
             </div>
             <div class="add-email">
                 <span class="input-group-addon"><i class="material-icons">alternate_email</i></i></span>
-                <input type="email" name="email" placeholder="Email" required/>
+                <input type="email" id="email" name="email" placeholder="Email" required/>
             </div>
             <div class="add-phone">
                 <span class="input-group-addon"><i class="material-icons">phone</i></span>
-                <input type="text" name="phonenumber" placeholder="Téléphone" maxlength="15" required/>
+                <input type="text" id="phone-number" name="phonenumber" placeholder="Téléphone" maxlength="15" required/>
             </div>
             <div class="add-address">
                 <span class="input-group-addon"><i class="material-icons">place</i></span>
-                <input type="text" name="address" placeholder="Adresse" required/>
+                <input type="text" id="address" name="address" placeholder="Adresse" required/>
             </div>
             <div class="add-description">
                 <span class="input-group-addon"><i class="material-icons comment">comment</i></span>
-                <textarea name="description" placeholder="Description" required></textarea>
+                <textarea name="description" id="description" placeholder="Description" required></textarea>
             </div>
 
-            <button type="submit">Ajouter</button>
+            <button type="submit" onclick="addForm()">Ajouter</button>
             
         </form>
     </div>
     
+    <script src="../js/add.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>

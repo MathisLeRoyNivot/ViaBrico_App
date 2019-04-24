@@ -9,19 +9,11 @@ const listAllProviders = function(req, res) {
   });
 };
 
-
-
 const createProvider = function(req, res) {
-  const new_fournisseur = new Fournisseur(req.body);
-  //handles null error 
-  if(!new_fournisseur.name || !new_fournisseur.description){
-    res.status(400).send({ error:true, message: 'Please provide name/description' });
-  } else {
-    Fournisseur.createFournisseur(new_fournisseur, function(err, fournisseur) {
+  Provider.createProvider(function(err, fournisseur) {
       if (err) res.send(err);
       res.json(fournisseur);
   });
-}
 };
 
 

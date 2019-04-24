@@ -43,7 +43,7 @@ const getFournisseurs = app.get("/api/fournisseur", (req, res) => {
     rows.forEach(row => {
       console.table(`ID: ${row.id}\nNom: ${row.name}\nTéléphone: ${row.phone_number}\nEmail: ${row.email}\nAdresse: ${row.address}\nDescription ${row.description}\n`);
     });
-  })
+  });
 });
 
 // Fournisseur by ID

@@ -10,15 +10,15 @@ const Provider = function (fournisseur) {
 };
 
 Provider.createProvider = function createUser(newFournisseur, result) {
-    db.query("INSERT INTO fournisseur set ?", newFournisseur, function (err, res) {
-
-        if (err) {
-            console.log("error: ", err);
-            result(err, null);
-        } else {
-            console.log(res.insertId);
-            result(null, res.insertId);
-        }
+    console.log(req.body);
+    db.connect(function(err) {
+        const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
+        db.query(insertProvider, function(err, result)  {
+            if(err) {
+                console.log(`\x1b[31m[-] Error when inserted new provider !\x1b[0m`);
+                throw err;
+            } else console.log(`\x1b[32m[+] New provider inserted !\x1b[0m`);
+        });
     });
 };
 // Task.getFournisseurById = function createUser(fournisseurId, result) {
