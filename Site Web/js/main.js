@@ -28,7 +28,7 @@ request.onload = function () {
             p3.textContent = provider.phone_number
 
             const a1 = document.createElement('a')
-            a1.setAttribute('href', '#')
+            a1.setAttribute('href', '#Edit')
 
             const i1 = document.createElement('i')
             i1.setAttribute('class', 'material-icons pen')
@@ -48,7 +48,7 @@ request.onload = function () {
             p5.textContent = provider.description
 
             const a2 = document.createElement('a')
-            a2.setAttribute('href', '#')
+            a2.setAttribute('href', '#Delete')
 
             const i2 = document.createElement('i')
             i2.setAttribute('class', 'material-icons bin')

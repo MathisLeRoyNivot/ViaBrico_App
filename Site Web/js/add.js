@@ -1,5 +1,3 @@
-const { axios } = require('axios');
-
 function addForm() {
     const urlPost = "http://localhost:3000/add";
 

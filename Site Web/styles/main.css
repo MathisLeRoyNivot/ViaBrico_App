@@ -272,18 +272,25 @@ body #list-cards .list-card .list-card-line1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
 }
 
-html #list-cards .list-card .list-card-line1 p,
-body #list-cards .list-card .list-card-line1 p {
-  margin: 0px 10px 5px 0px;
-  font-size: 25px;
+html #list-cards .list-card .list-card-line1 p.list-name,
+body #list-cards .list-card .list-card-line1 p.list-name {
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 23px;
 }
 
-html #list-cards .list-card .list-card-line1 .list-name,
-body #list-cards .list-card .list-card-line1 .list-name {
-  font-weight: bolder;
+html #list-cards .list-card .list-card-line1 p.list-email,
+body #list-cards .list-card .list-card-line1 p.list-email {
+  font-size: 20px;
+}
+
+html #list-cards .list-card .list-card-line1 p.list-phone,
+body #list-cards .list-card .list-card-line1 p.list-phone {
+  line-height: 20px;
+  font-size: 20px;
 }
 
 html #list-cards .list-card .list-card-line1 a,
@@ -316,9 +323,9 @@ body #list-cards .list-card .list-card-line2 {
   color: #353B48;
 }
 
-html #list-cards .list-card .list-card-line2 p,
-body #list-cards .list-card .list-card-line2 p {
-  font-size: 20px;
+html #list-cards .list-card .list-card-line2 p.list-address,
+body #list-cards .list-card .list-card-line2 p.list-address {
+  font-size: 18px;
 }
 
 html #list-cards .list-card .list-card-line3,
@@ -331,6 +338,11 @@ body #list-cards .list-card .list-card-line3 {
           justify-content: space-between;
   margin: 10px;
   color: #353B48;
+}
+
+html #list-cards .list-card .list-card-line3 p,
+body #list-cards .list-card .list-card-line3 p {
+  font-size: 14px;
 }
 
 html #list-cards .list-card .list-card-line3 .bin,
@@ -604,3 +616,4 @@ body .add-div-connexion .add-form button[type="submit"] {
   margin-bottom: 25px;
   width: 180px;
 }
+/*# sourceMappingURL=main.css.map */
