@@ -21,6 +21,7 @@ Provider.createProvider = function createUser(newFournisseur, result) {
         });
     });
 };
+
 // Task.getFournisseurById = function createUser(fournisseurId, result) {
 //     sql.query("Select name from fournisseur where id = ? ", fournisseurId, function (err, res) {
 //         if (err) {
@@ -33,6 +34,7 @@ Provider.createProvider = function createUser(newFournisseur, result) {
 //         }
 //     });
 // };
+
 Provider.getAllProvider = function getAllProvider(result) {
     db.query("Select * from fournisseur", function (err, res) {
 
