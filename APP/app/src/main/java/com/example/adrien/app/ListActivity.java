@@ -22,6 +22,8 @@ import com.loopj.android.http.RequestParams;
 import java.util.ArrayList;
 import java.util.List;
 
+import cz.msebera.android.httpclient.Header;
+
 public class ListActivity extends Activity {
 
     private RecyclerView recyclerView;
@@ -74,10 +76,9 @@ public class ListActivity extends Activity {
             RequestParams requestParams = new RequestParams();
 
             //Call
-            client.get("http://s519716619.onlinehome.fr/exchange/madrental/get-vehicules.php", requestParams, new AsyncHttpResponseHandler() {
+            client.get("https://viabrico-api.herokuapp.com/fournisseurs", requestParams, new AsyncHttpResponseHandler() {
                 @Override
-                public void onSuccess(int statusCode, PreferenceActivity.Header[] headers,
-                                      byte[] response) {
+                public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                     String providers = new String(response);
                     try {
                         //Put Webservice return in local variable
@@ -88,19 +89,11 @@ public class ListActivity extends Activity {
                         for (int i = 0; i < calledJSON.length(); i++) {
                             try {
                                 forJsonObject = calledJSON.getJSONObject(i);
-                                /*
-                                Integer vID = Integer.parseInt(forJsonObject.getString("id"));
-                                String vName = forJsonObject.getString("nom");
-                                String vImage = forJsonObject.getString("image");
-                                Integer vAvailable = Integer.parseInt(forJsonObject.getString("disponible"));
-                                Integer vBaseDailyPrice = Integer.parseInt(forJsonObject.getString("prixjournalierbase"));
-                                Integer vSale = Integer.parseInt(forJsonObject.getString("promotion"));
-                                Integer vAgeMin = Integer.parseInt(forJsonObject.getString("agemin"));
-                                String vCO2Category = forJsonObject.getString("categorieco2");
-                                JSONArray vEquipments = forJsonObject.getJSONArray("equipements");
-                                JSONArray vOptions = forJsonObject.getJSONArray("options");
-                                */
-
+                                String p_name = forJsonObject.getString("name");
+                                String p_email = forJsonObject.getString("email");
+                                String p_phone = forJsonObject.getString("phone_number");
+                                String p_address = forJsonObject.getString("address");
+                                String p_description = forJsonObject.getString("description");
 
                                 providerList.add(new Provider(p_name, p_email, p_phone, p_address, p_description));
 
@@ -119,16 +112,17 @@ public class ListActivity extends Activity {
                 }
 
                 @Override
-                public void onFailure(int statusCode, PreferenceActivity.Header[] headers,
-                                      byte[] errorResponse, Throwable e) {
-                    Log.e("Error", e.toString());
+                public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                    Log.e("Error", error.toString());
                 }
+
             });
 
         }
     }
 
 
+    /*
     @Override
     public void finish()
     {
@@ -136,5 +130,6 @@ public class ListActivity extends Activity {
         overridePendingTransition(R.anim.page_slide_horizontal_out,
                 R.anim.page_slide_horizontal_back);
     }
+    */
 
 }
