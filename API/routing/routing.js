@@ -60,11 +60,14 @@ const getOneFournisseur = app.get("/api/fournisseur/:id", (req, res) => {
 });
 
 
+
+
 // --------- POST METHODS ---------
 import { name, email, phoneNumber, address, description } from '../../Site Web/js/add';
 // Fournisseurs
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const postNewFournisseur = app.post('/fournisseurs',urlencodedParser, function(req, res, next) {
+  
   console.log(req.body);
   db.connect(function(err) {
     const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + name.value + "', '" + email.value + "', '" + phoneNumber.value + "', '" + address.value + "', '" + description.value + "')";

@@ -2,9 +2,9 @@ const Provider = require('../models/model');
 
 const listAllProviders = function(req, res) {
   Provider.getAllProvider(function(err, fournisseur) {
-    console.log('controller')
+    // console.log('controller')
     if (err) res.send(err);
-    console.log('res', fournisseur);
+    console.log('Liste fournisseurs :', fournisseur);
     res.send(fournisseur);
   });
 };
