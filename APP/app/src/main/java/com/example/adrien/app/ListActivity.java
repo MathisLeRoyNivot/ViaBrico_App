@@ -2,6 +2,7 @@ package com.example.adrien.app;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.preference.PreferenceActivity;
@@ -9,7 +10,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +30,7 @@ import cz.msebera.android.httpclient.Header;
 public class ListActivity extends Activity {
 
     private RecyclerView recyclerView;
+    private ImageButton button_add;
     private ProviderAdapter providerAdapter = null;
     private JSONArray calledJSON;
     private JSONObject forJsonObject;
@@ -40,6 +44,18 @@ public class ListActivity extends Activity {
 
         //Catch IDs
         recyclerView = findViewById(R.id.recyclerviewid);
+        button_add = findViewById(R.id.button_add);
+
+        //OnClick Listener on ImageButton
+        button_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AddProviderActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.page_slide_horizontal_in,
+                        R.anim.page_slide_horizontal_out);
+            }
+        });
 
         //Better performances
         recyclerView.setHasFixedSize(true);
@@ -122,7 +138,6 @@ public class ListActivity extends Activity {
     }
 
 
-    /*
     @Override
     public void finish()
     {
@@ -130,6 +145,6 @@ public class ListActivity extends Activity {
         overridePendingTransition(R.anim.page_slide_horizontal_out,
                 R.anim.page_slide_horizontal_back);
     }
-    */
+
 
 }
