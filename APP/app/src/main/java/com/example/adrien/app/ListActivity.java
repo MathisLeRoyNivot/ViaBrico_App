@@ -93,7 +93,7 @@ public class ListActivity extends Activity {
 
 
             //Call
-            client.get("https://viabrico-api.herokuapp.com/fournisseurs", new AsyncHttpResponseHandler() {
+            client.get("https://viabrico-api.herokuapp.com/providers", new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                     String providers = new String(response);
