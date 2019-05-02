@@ -22,6 +22,7 @@
 		- [ ] Login 
 		- [ ] Registration
 		- [ ] Redirection
+		- [ ] Logout
 
 - [ ] **Android App :**
 	- [ ] ***Front***
