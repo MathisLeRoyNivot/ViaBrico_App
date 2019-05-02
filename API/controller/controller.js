@@ -1,4 +1,4 @@
-const Provider = require('../models/model');
+const {Provider, User} = require('../models/model');
 
 const listAllProviders = function(req, res) {
   Provider.getAllProvider(function(err, fournisseur) {
@@ -41,9 +41,21 @@ const deleteProvider = function(req, res) {
   });
 };
 
+const listAllUsers = function(req, res) {
+  User.getAllUsers(function(err, user) {
+    console.log('controller')
+    if (err) res.send(err);
+    console.log('erreur', user);
+    res.send(user);
+  });
+};
+
+
+
 module.exports = {
   listAllProviders,
   createProvider,
   updateProvider,
-  deleteProvider
+  deleteProvider,
+  listAllUsers
 }

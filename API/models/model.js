@@ -8,6 +8,10 @@ const Provider = function (fournisseur) {
     this.address = fournisseur.address;
     this.description = fournisseur.description;
 };
+const User = function (user) {
+    this.login = user.login;
+    this.password = user.password;
+};
 
 Provider.createProvider = function createUser(newFournisseur, result) {
     console.log(req.body);
@@ -66,5 +70,17 @@ Provider.remove = function (id, result) {
         }
     });
 };
+User.getAllUsers = function getAllUsers(result) {
+    db.query("Select * from compte", function (err, res) {
 
-module.exports = Provider;
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+        } else {
+            console.log('user : ', res);
+            result(null, res);
+        }
+    });
+};
+
+module.exports =  { User, Provider };

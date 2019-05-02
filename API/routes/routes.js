@@ -10,6 +10,9 @@ module.exports = function (app) {
         //.get(todoList.read_a_fournisseur)
         .put(todoList.updateProvider)
         .delete(todoList.deleteProvider);
+    
+    app.route('/users')
+        .get(todoList.listAllUsers);
 };
 
 
