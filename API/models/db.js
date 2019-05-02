@@ -6,8 +6,7 @@ const dbConnection = mysql.createConnection({
     host     : dbHost,
     user     : dbUsername,
     password : dbPassword,
-    database : dbName,
-    // socketPath: '/Applications/XAMPP/tmp/mysql/mysql.sock'
+    database : dbName
 });
 
 dbConnection.connect(function(err) {
