@@ -2,6 +2,7 @@ package com.example.adrien.app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,7 @@ public class ProviderAdapter extends RecyclerView.Adapter<ProviderAdapter.Provid
         public TextView provider_phone;
         public TextView provider_address;
         public TextView provider_description;
-        public LinearLayout provider_wrapper;
+        public ConstraintLayout provider_wrapper;
 
 
         //Constructor
