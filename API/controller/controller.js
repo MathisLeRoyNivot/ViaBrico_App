@@ -16,7 +16,6 @@ const createProvider = function(req, res) {
   });
 };
 
-
 // exports.read_a_fournisseur = function(req, res) {
 //   Fournisseur.getFournisseurById(req.params.fournisseurId, function(err, fournisseur) {
 //     if (err)
@@ -25,14 +24,12 @@ const createProvider = function(req, res) {
 //   });
 // };
 
-
 const updateProvider = function(req, res) {
   Provider.updateById(req.params.fournisseurId, new Fournisseur(req.body), function(err, fournisseur) {
     if (err) res.send(err);
     res.json(fournisseur);
   });
 };
-
 
 const deleteProvider = function(req, res) {
   Provider.remove( req.params.fournisseurId, function(err, fournisseur) {

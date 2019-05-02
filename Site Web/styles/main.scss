@@ -18,6 +18,11 @@ $form-bg-color: rgba(255, 255, 255, .35);
 $main-font: "Montserrat", sans-serif;
 $form-title-size: 2em;
 $form-input-size: 1.1em;
+$card-list-name-size: 23px;
+$card-list-phone-size: 20px;
+$card-list-email-size: 20px;
+$card-list-address-size: 18px;
+$card-list-description-size: 14px;
 
 // Elements size 
 $logo-height: 80px;
@@ -137,7 +142,6 @@ body {
 
     // ---------------------------------------
     // List Page Styles
-    
     .list-title-container {
         display: flex;
         justify-content: center;
@@ -170,15 +174,25 @@ body {
                 color: $text-color;
                 display: flex;
                 justify-content: space-between;
-                margin: 10px;
+                margin: 10px 10px 0px 10px;
 
                 p {
-                    margin: 0px 10px 5px 0px;
-                    font-size: 25px;
-                }
 
-                .list-name {
-                    font-weight: bolder;
+                    &.list-name {
+                        font-weight: bold;
+                        font-size: $card-list-name-size;
+                        line-height: $card-list-name-size;
+                    }
+
+                    &.list-email {
+                        font-size: $card-list-email-size;
+                    }
+
+                    &.list-phone {
+                        line-height: $card-list-phone-size;
+                        font-size: $card-list-phone-size;
+                    }
+
                 }
 
                 a {
@@ -192,7 +206,7 @@ body {
                     .pen {
                         font-size: 30px;
                     }
-                }
+                }  
             }
 
             .list-card-line2 {
@@ -201,26 +215,30 @@ body {
                 margin: 10px;
                 color: $text-color;
 
-                p {
-                    font-size: 20px;
+                p.list-address {
+                    font-size: $card-list-address-size;
                 }
             }
-
+            
             .list-card-line3 {
                 display: flex;
                 justify-content: space-between;
                 margin: 10px;
                 color: #353B48;
-
+    
+                p {
+                    font-size: $card-list-description-size;
+                }
+    
                 .bin {
                     color: $red-bin-color;
                     font-size: 30px;
                     transition: all .1s ease-in-out;
-
+    
                     &:hover {
                         transform: scale(1.1);
                     }
-
+    
                 }
             }
         }
