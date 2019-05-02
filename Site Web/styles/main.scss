@@ -26,7 +26,7 @@ $card-list-address-size: 18px;
 $card-list-description-size: 14px;
 
 // Elements size 
-$logo-height: 80px;
+$logo-height: 85px;
 $logo-width: 150px;
 $input-height: 45px;
 $input-width: 450px;
@@ -49,7 +49,9 @@ body {
     // ---------------------------------------
     // Login Page Styles
     .div-logo {
-        background: black;
+        background-image: url('../img/ViaBrico-Logo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
         height: $logo-height;
         margin: 20px 0 0 20px;
         width: $logo-width;

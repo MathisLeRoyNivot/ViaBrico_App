@@ -65,8 +65,10 @@ body {
 
 html .div-logo,
 body .div-logo {
-  background: black;
-  height: 80px;
+  background-image: url("../img/ViaBrico-Logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85px;
   margin: 20px 0 0 20px;
   width: 150px;
 }
