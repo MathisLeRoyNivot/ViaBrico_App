@@ -58,7 +58,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:id="@+id/email-input"
+                android:id="@+id/emailInput"
                 android:hint="Email"
                 android:drawableLeft="@drawable/email_icon"
                 android:drawableTint="#353B48"
@@ -72,22 +72,22 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:id="@+id/password-input"
+                android:id="@+id/passwordInput"
                 android:hint="Mot de passe"
                 android:drawableLeft="@drawable/password_icon"
                 android:drawableTint="#353B48"
                 android:drawablePadding="10dp"
                 android:paddingLeft="10dp"
                 android:background="@drawable/form_bg"
-                app:layout_constraintTop_toBottomOf="@+id/email-input"
-                app:layout_constraintBottom_toTopOf="@+id/connect-submit"
+                app:layout_constraintTop_toBottomOf="@+id/emailInput"
+                app:layout_constraintBottom_toTopOf="@+id/connectButton"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:id="@+id/connect-submit"
+                android:id="@+id/connectButton"
                 android:text="Se connecter"
                 android:textSize="15sp"
                 android:textColor="#353B48"

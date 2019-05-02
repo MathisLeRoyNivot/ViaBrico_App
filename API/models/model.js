@@ -9,6 +9,10 @@ const Provider = function (fournisseur) {
     this.address = fournisseur.address;
     this.description = fournisseur.description;
 };
+const User = function (user) {
+    this.login = user.login;
+    this.password = user.password;
+};
 
 Provider.createProvider = function createUser(newFournisseur, result) {
     db.query("INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + this.name + "', '" + this.email + "', '" + this.phoneNumber + "', '" + this.address + "', '" + this.description + "')", newFournisseur, function (err, res) {
@@ -67,5 +71,17 @@ Provider.remove = function removeProvider(name, result) {
         }
     });
 };
+User.getAllUsers = function getAllUsers(result) {
+    db.query("Select * from compte", function (err, res) {
 
-module.exports = Provider;
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+        } else {
+            console.log('user : ', res);
+            result(null, res);
+        }
+    });
+};
+
+module.exports =  { User, Provider };
