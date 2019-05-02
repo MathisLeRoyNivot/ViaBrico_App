@@ -87,12 +87,13 @@ public class ListActivity extends Activity {
 
             //Http Client
             AsyncHttpClient client = new AsyncHttpClient();
+            client.setConnectTimeout(20000);
+            client.setMaxRetriesAndTimeout(10, 20000);
+            client.setResponseTimeout(20000);
 
-            //Parameters
-            RequestParams requestParams = new RequestParams();
 
             //Call
-            client.get("https://viabrico-api.herokuapp.com/fournisseurs", requestParams, new AsyncHttpResponseHandler() {
+            client.get("https://viabrico-api.herokuapp.com/fournisseurs", new AsyncHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] response) {
                     String providers = new String(response);
