@@ -12,7 +12,7 @@
 	- [ ] ***Node.JS API***
 		- [x] GET Methods
 		- [x] POST Methods
-		- [ ] DELETE Methods
+		- [x] DELETE Methods
 		- [ ] PUT Methods
 		- [x] Adding provider Back side
 	- [x] ***MySQL Database***
@@ -22,15 +22,17 @@
 		- [ ] Login 
 		- [ ] Registration
 		- [ ] Redirection
+		- [ ] Logout
 
 - [ ] **Android App :**
 	- [ ] ***Front***
-		- [ ] Login page
-		- [ ] Provider list page
-		- [ ] Adding provider page
+		- [x] Login page
+		- [x] Provider list page
+		- [x] Adding provider page
 	- [ ] ***Functionality :***
 		- [ ] Login
 		- [ ] Register
+		- [x] List all provider
 		- [ ] Adding
 		- [ ] Edit 
 
