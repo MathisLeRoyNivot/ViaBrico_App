@@ -1,4 +1,5 @@
-const db = require('./db');
+const db = require('./db.js');
+const bodyParser = require('body-parser');
 
 //Fournisseur object constructor
 const Provider = function (provider) {
@@ -7,6 +8,10 @@ const Provider = function (provider) {
     this.phone_number = provider.phonenumber;
     this.address = provider.address;
     this.description = provider.description;
+};
+const User = function (user) {
+    this.login = user.login;
+    this.password = user.password;
 };
 
 Provider.createProvider = function createProvider(newProvider, result) {
@@ -17,7 +22,7 @@ Provider.createProvider = function createProvider(newProvider, result) {
         } else {
             console.log(res.insertId);
             result(null, res.insertId);
-        }
+        };
     });
     // db.connect(function(err) {
     //     const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
@@ -66,9 +71,8 @@ Provider.updateById = function (id, fournisseur, result) {
     });
 };
 
-Provider.remove = function (id, result) {
-    db.query("DELETE FROM fournisseur WHERE id = ?", [id], function (err, res) {
-
+Provider.remove = function removeProvider(name, result) {
+    db.query("DELETE FROM fournisseur WHERE name = ?", [name], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -77,5 +81,20 @@ Provider.remove = function (id, result) {
         }
     });
 };
+User.getAllUsers = function getAllUsers(result) {
+    db.query("Select * from compte", function (err, res) {
 
-module.exports = Provider;
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+        } else {
+            console.log('user : ', res);
+            result(null, res);
+        }
+    });
+};
+
+module.exports =  { 
+    User, 
+    Provider 
+};

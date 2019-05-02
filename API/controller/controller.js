@@ -1,4 +1,4 @@
-const Provider = require('../models/model');
+const {Provider, User} = require('../models/model');
 
 const listAllProviders = function(req, res) {
   Provider.getAllProvider(function(err, fournisseur) {
@@ -55,15 +55,27 @@ const updateProvider = function(req, res) {
 };
 
 const deleteProvider = function(req, res) {
-  Provider.remove( req.params.fournisseurId, function(err, fournisseur) {
+  Provider.remove( req.params.name, function(err, fournisseur) {
     if (err) res.send(err);
     res.json({ message: 'Fournisseur successfully deleted' });
   });
 };
 
+const listAllUsers = function(req, res) {
+  User.getAllUsers(function(err, user) {
+    console.log('controller')
+    if (err) res.send(err);
+    console.log('erreur', user);
+    res.send(user);
+  });
+};
+
+
+
 module.exports = {
   listAllProviders,
   createProvider,
   updateProvider,
-  deleteProvider
+  deleteProvider,
+  listAllUsers
 }

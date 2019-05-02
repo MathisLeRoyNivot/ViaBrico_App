@@ -134,9 +134,9 @@ body .index-div-connexion .index-form i {
   position: absolute;
 }
 
-html .index-div-connexion .index-form input[type="email"],
+html .index-div-connexion .index-form input[type="text"],
 html .index-div-connexion .index-form input[type="password"],
-body .index-div-connexion .index-form input[type="email"],
+body .index-div-connexion .index-form input[type="text"],
 body .index-div-connexion .index-form input[type="password"] {
   border: none;
   border-radius: 7px;
@@ -153,9 +153,9 @@ body .index-div-connexion .index-form input[type="password"] {
   width: 450px;
 }
 
-html .index-div-connexion .index-form input[type="email"]::-webkit-input-placeholder,
+html .index-div-connexion .index-form input[type="text"]::-webkit-input-placeholder,
 html .index-div-connexion .index-form input[type="password"]::-webkit-input-placeholder,
-body .index-div-connexion .index-form input[type="email"]::-webkit-input-placeholder,
+body .index-div-connexion .index-form input[type="text"]::-webkit-input-placeholder,
 body .index-div-connexion .index-form input[type="password"]::-webkit-input-placeholder {
   color: rgba(112, 112, 122, 0.5);
   font-family: "Montserrat", sans-serif;
@@ -163,9 +163,9 @@ body .index-div-connexion .index-form input[type="password"]::-webkit-input-plac
   letter-spacing: 2px;
 }
 
-html .index-div-connexion .index-form input[type="email"]:-ms-input-placeholder,
+html .index-div-connexion .index-form input[type="text"]:-ms-input-placeholder,
 html .index-div-connexion .index-form input[type="password"]:-ms-input-placeholder,
-body .index-div-connexion .index-form input[type="email"]:-ms-input-placeholder,
+body .index-div-connexion .index-form input[type="text"]:-ms-input-placeholder,
 body .index-div-connexion .index-form input[type="password"]:-ms-input-placeholder {
   color: rgba(112, 112, 122, 0.5);
   font-family: "Montserrat", sans-serif;
@@ -173,9 +173,9 @@ body .index-div-connexion .index-form input[type="password"]:-ms-input-placehold
   letter-spacing: 2px;
 }
 
-html .index-div-connexion .index-form input[type="email"]::-ms-input-placeholder,
+html .index-div-connexion .index-form input[type="text"]::-ms-input-placeholder,
 html .index-div-connexion .index-form input[type="password"]::-ms-input-placeholder,
-body .index-div-connexion .index-form input[type="email"]::-ms-input-placeholder,
+body .index-div-connexion .index-form input[type="text"]::-ms-input-placeholder,
 body .index-div-connexion .index-form input[type="password"]::-ms-input-placeholder {
   color: rgba(112, 112, 122, 0.5);
   font-family: "Montserrat", sans-serif;
@@ -183,9 +183,9 @@ body .index-div-connexion .index-form input[type="password"]::-ms-input-placehol
   letter-spacing: 2px;
 }
 
-html .index-div-connexion .index-form input[type="email"]::placeholder,
+html .index-div-connexion .index-form input[type="text"]::placeholder,
 html .index-div-connexion .index-form input[type="password"]::placeholder,
-body .index-div-connexion .index-form input[type="email"]::placeholder,
+body .index-div-connexion .index-form input[type="text"]::placeholder,
 body .index-div-connexion .index-form input[type="password"]::placeholder {
   color: rgba(112, 112, 122, 0.5);
   font-family: "Montserrat", sans-serif;

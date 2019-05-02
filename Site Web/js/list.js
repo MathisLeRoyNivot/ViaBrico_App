@@ -1,12 +1,14 @@
+// We collect the div Id that will contain the providers
 const app = document.getElementById('list-cards')
 
-
+// Use the get function from the api
 const request = new XMLHttpRequest()
 request.open('GET', 'http://localhost:3000/fournisseurs', true)
 request.onload = function () {
     // Begin accessing JSON data here
     const data = JSON.parse(this.response)
     if (request.status >= 200 && request.status < 400) {
+        // For each provider in the db, we create the html
         data.forEach(provider => {
 
             const container = document.createElement('div')
@@ -52,6 +54,7 @@ request.onload = function () {
 
             const i2 = document.createElement('i')
             i2.setAttribute('class', 'material-icons bin')
+            i2.setAttribute('onClick', 'deleteCard(this)')
             i2.textContent = 'delete'
 
 
