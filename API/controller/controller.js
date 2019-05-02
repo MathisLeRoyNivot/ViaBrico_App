@@ -1,14 +1,16 @@
 const {Provider, User} = require('../models/model');
 
+// Use function get Providers
 const listAllProviders = function(req, res) {
   Provider.getAllProvider(function(err, fournisseur) {
-    // console.log('controller')
     if (err) res.send(err);
     console.log('Liste fournisseurs :', fournisseur);
     res.send(fournisseur);
   });
 };
 
+
+// Use function createProvider
 const createProvider = function(req, res) {
   const name = req.body.name;
   const email = req.body.email;
@@ -18,17 +20,12 @@ const createProvider = function(req, res) {
 
   console.log("New provider : \nName : " + name + "\nEmail : " + email + "\nPhone number : " + phone_number + "\nAddress : " + address + "\nDescription : " + description);
   
-  // Provider.createProvider(function(err, newProvider) {
-  //   if (err) res.send(err);
-  //   res.json(newProvider);
-  // });
-  
   var newProvider = new Provider(req.body);
     //handles null error 
     if (!newProvider.name) {
         res.status(400).send({
             error: true,
-            message: 'Please provide task/status'
+            message: 'Please provide name'
         });
     } else {
         Provider.createProvider(newProvider, function (err, Provider) {
@@ -39,28 +36,26 @@ const createProvider = function(req, res) {
 
 };
 
-// exports.read_a_fournisseur = function(req, res) {
-//   Fournisseur.getFournisseurById(req.params.fournisseurId, function(err, fournisseur) {
-//     if (err)
-//       res.send(err);
-//     res.json(fournisseur);
-//   });
-// };
 
+// Use function Update Provider
 const updateProvider = function(req, res) {
-  Provider.updateById(req.params.fournisseurId, new Fournisseur(req.body), function(err, fournisseur) {
+  Provider.updateByName(req.params.name, req.params.description, req.params.address, req.params.phone_number, req.params.email, new Provider(req.body), function(err, provider) {
     if (err) res.send(err);
-    res.json(fournisseur);
+    res.json(provider);
   });
 };
 
+
+// Use function delete Provider
 const deleteProvider = function(req, res) {
-  Provider.remove( req.params.name, function(err, fournisseur) {
+  Provider.remove( req.params.name, function(err, provider) {
     if (err) res.send(err);
     res.json({ message: 'Fournisseur successfully deleted' });
   });
 };
 
+
+// Use function get Users
 const listAllUsers = function(req, res) {
   User.getAllUsers(function(err, user) {
     console.log('controller')
@@ -69,7 +64,6 @@ const listAllUsers = function(req, res) {
     res.send(user);
   });
 };
-
 
 
 module.exports = {

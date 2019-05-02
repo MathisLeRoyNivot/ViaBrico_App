@@ -7,7 +7,6 @@ module.exports = function (app) {
         .post(todoList.createProvider);
 
     app.route('/fournisseurs/:name')
-        //.get(todoList.read_a_fournisseur)
         .put(todoList.updateProvider)
         .delete(todoList.deleteProvider);
     

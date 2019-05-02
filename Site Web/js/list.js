@@ -34,6 +34,7 @@ request.onload = function () {
 
             const i1 = document.createElement('i')
             i1.setAttribute('class', 'material-icons pen')
+            i1.setAttribute('onClick', 'editProvider(this)')
             i1.textContent = 'edit'
 
             const line2 = document.createElement('div')

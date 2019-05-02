@@ -1,7 +1,7 @@
 const db = require('./db.js');
 const bodyParser = require('body-parser');
 
-//Fournisseur object constructor
+//Provider object constructor
 const Provider = function (provider) {
     this.name = provider.name;
     this.email = provider.email;
@@ -9,12 +9,15 @@ const Provider = function (provider) {
     this.address = provider.address;
     this.description = provider.description;
 };
+//User object constructor
 const User = function (user) {
     this.login = user.login;
     this.password = user.password;
 };
 
+// Function Add Provider
 Provider.createProvider = function createProvider(newProvider, result) {
+    // Query sql to make an insert with an array of args
     db.query("INSERT INTO fournisseur set ?", [newProvider], function (err, res) {
         if (err) {
             console.log("error: ", err);
@@ -24,44 +27,25 @@ Provider.createProvider = function createProvider(newProvider, result) {
             result(null, res.insertId);
         };
     });
-    // db.connect(function(err) {
-    //     const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
-    //     db.query(insertProvider, function(err, result)  {
-    //         if(err) {
-    //             console.log(`\x1b[31m[-] Error when inserted new provider !\x1b[0m`);
-    //             throw err;
-    //         } else console.log(`\x1b[32m[+] New provider inserted !\x1b[0m`);
-    //     });
-    // });
 };
 
-// Task.getFournisseurById = function createUser(fournisseurId, result) {
-//     sql.query("Select name from fournisseur where id = ? ", fournisseurId, function (err, res) {
-//         if (err) {
-//             console.log("error: ", err);
-//             result(err, null);
-//         }
-//         else {
-//             result(null, res);
-
-//         }
-//     });
-// };
-
+// Function Listing Providers
 Provider.getAllProvider = function getAllProvider(result) {
+    // Query sql to collect all data from "fournisseur" table
     db.query("SELECT * FROM fournisseur", function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
         } else {
-            // console.log('Fournisseurs : ', res);
             result(null, res);
         }
     });
 };
 
-Provider.updateById = function (id, fournisseur, result) {
-    db.query("UPDATE fournisseur SET name = ? WHERE id = ?", [Provider.name, id], function (err, res) {
+// Function Update with name
+Provider.updateByName = function (name, description, address, phone_number, email, result) {
+    // Query sql to update the table "fournisseur"
+    db.query("UPDATE fournisseur SET name = ?, description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [name, description, address, phone_number, email], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -71,7 +55,9 @@ Provider.updateById = function (id, fournisseur, result) {
     });
 };
 
+// Function delete with namz
 Provider.remove = function removeProvider(name, result) {
+    // Query sql to delete with "fournisseur"'s name
     db.query("DELETE FROM fournisseur WHERE name = ?", [name], function (err, res) {
         if (err) {
             console.log("error: ", err);
@@ -81,7 +67,10 @@ Provider.remove = function removeProvider(name, result) {
         }
     });
 };
+
+// Function Get users
 User.getAllUsers = function getAllUsers(result) {
+    // Query sql to select all logins and passwords
     db.query("Select * from compte", function (err, res) {
 
         if (err) {
