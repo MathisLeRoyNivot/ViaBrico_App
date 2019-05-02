@@ -6,7 +6,7 @@ function deleteCard(obj) {
 
     // Use the delete function from the api
     const request = new XMLHttpRequest()
-    request.open('DELETE', `http://localhost:3000/fournisseurs/${name}`, true)
+    request.open('DELETE', `http://localhost:3000/providers/${name}`, true)
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
             // Reload the page after the delete
