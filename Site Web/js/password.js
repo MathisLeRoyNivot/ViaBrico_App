@@ -1,7 +1,5 @@
-const login=document.getElementById("login");
-const password=document.getElementById("password");
 
-
+//code of SHA256 function
 function SHA256(s){
     var chrsz=8;
     var hexcase=0;
@@ -97,31 +95,12 @@ s=Utf8Encode(s);
 return binb2hex(core_sha256(str2binb(s),s.length*chrsz));
 }
 
-function connexion (){
-    const request = new XMLHttpRequest()
-    request.open('GET', 'http://localhost:3000/users', true)
-    request.onload = function () {
-        const data = JSON.parse(this.response)
-        if (request.status >= 200 && request.status < 400) {
-            data.forEach(user => { 
-                var passhash = password.value;
-                var passhash = SHA256(passhash);
-                console.log(passhash);
-                if(login.value == user.login && passhash == user.password){
-                    window.location.href = "./pages/list.html";
-                    console.log("success")
-                }
-                else{
-                    console.log("erreur")
-                }
-            })
-        } else {
-            console.log("erreur2")
-        }
-    }
-    request.send()
+// register onclick events for Encrypt button
+document.getElementById('cryptstr').onclick = function(){
+ // gets data from input text
+ var txt_string = document.getElementById('strex').value;
+
+ // encrypts data and adds it in #strcrypt element
+ document.getElementById('strcrypt').value = SHA256(txt_string);
+ return false;
 }
-
-
-
-
