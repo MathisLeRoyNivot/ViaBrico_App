@@ -4,15 +4,13 @@ const db = require('./db');
 const Provider = function (provider) {
     this.name = provider.name;
     this.email = provider.email;
-    this.phone_number = provider.phone_number;
+    this.phone_number = provider.phonenumber;
     this.address = provider.address;
     this.description = provider.description;
 };
 
-Provider.createProvider = function createUser(newProvider, result) {
-    console.log(req.body);
-    db.query("INSERT INTO fournisseur set ?", newProvider, function (err, res) {
-        
+Provider.createProvider = function createProvider(newProvider, result) {
+    db.query("INSERT INTO fournisseur set ?", [newProvider], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(err, null);
@@ -58,7 +56,7 @@ Provider.getAllProvider = function getAllProvider(result) {
 };
 
 Provider.updateById = function (id, fournisseur, result) {
-    db.query("UPDATE fournisseur SET name = ? WHERE id = ?", [fournisseur.name, id], function (err, res) {
+    db.query("UPDATE fournisseur SET name = ? WHERE id = ?", [Provider.name, id], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);

@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `fournisseur` (
   `name` varchar(255) NOT NULL,
   `description` varchar(500) NOT NULL,
   `address` varchar(200) NOT NULL,
-  `phone_number` int(20) NOT NULL,
+  `phone_number` varchar(10) NOT NULL,
   `email` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 

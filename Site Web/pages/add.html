@@ -23,7 +23,7 @@
     </a>
 
     <div class="add-div-connexion">
-        <form class="add-form" method="POST">
+        <form class="add-form" method="POST" action="http://localhost:3000/fournisseurs">
 
             <h1 class="add-title">Ajout d'un fournisseur</h1>
             <hr class="add-separation-form">
@@ -38,7 +38,7 @@
             </div>
             <div class="add-phone">
                 <span class="input-group-addon"><i class="material-icons">phone</i></span>
-                <input type="text" id="phone-number" name="phonenumber" placeholder="Téléphone" maxlength="15" required/>
+                <input type="text" id="phone-number" name="phonenumber" placeholder="Téléphone" required/>
             </div>
             <div class="add-address">
                 <span class="input-group-addon"><i class="material-icons">place</i></span>
@@ -49,12 +49,14 @@
                 <textarea name="description" id="description" placeholder="Description" required></textarea>
             </div>
 
-            <button type="submit" onclick="addForm(name, email, phoneNumber, address, description)">Ajouter</button>
+            <button type="submit">Ajouter</button>
+            <!-- onclick="addForm(name, email, phoneNumber, address, description)" -->
             
         </form>
     </div>
     
     <script src="../js/add.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 </body>
 </html>

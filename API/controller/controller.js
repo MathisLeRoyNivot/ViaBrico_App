@@ -10,10 +10,33 @@ const listAllProviders = function(req, res) {
 };
 
 const createProvider = function(req, res) {
-  Provider.createProvider(function(err, fournisseur) {
-      if (err) res.send(err);
-      res.json(fournisseur);
-  });
+  const name = req.body.name;
+  const email = req.body.email;
+  const phone_number = req.body.phonenumber;
+  const address = req.body.address;
+  const description = req.body.description;
+
+  console.log("New provider : \nName : " + name + "\nEmail : " + email + "\nPhone number : " + phone_number + "\nAddress : " + address + "\nDescription : " + description);
+  
+  // Provider.createProvider(function(err, newProvider) {
+  //   if (err) res.send(err);
+  //   res.json(newProvider);
+  // });
+  
+  var newProvider = new Provider(req.body);
+    //handles null error 
+    if (!newProvider.name) {
+        res.status(400).send({
+            error: true,
+            message: 'Please provide task/status'
+        });
+    } else {
+        Provider.createProvider(newProvider, function (err, Provider) {
+            if (err)res.send(err);
+            res.json(Provider);
+        });
+    }
+
 };
 
 // exports.read_a_fournisseur = function(req, res) {
