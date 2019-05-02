@@ -10,6 +10,7 @@ const Provider = function (provider) {
     this.description = provider.description;
 };
 //User object constructor
+
 const User = function (user) {
     this.login = user.login;
     this.password = user.password;
@@ -72,7 +73,6 @@ Provider.remove = function removeProvider(name, result) {
 User.getAllUsers = function getAllUsers(result) {
     // Query sql to select all logins and passwords
     db.query("Select * from compte", function (err, res) {
-
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -83,7 +83,7 @@ User.getAllUsers = function getAllUsers(result) {
     });
 };
 
-module.exports =  { 
-    User, 
-    Provider 
+module.exports = {
+    User,
+    Provider
 };

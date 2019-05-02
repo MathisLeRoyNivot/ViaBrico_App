@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".AddProviderActivity"></activity>
-        <activity android:name=".ListActivity"></activity>
-        <activity android:name=".ConnectionActivity">
+        <activity android:name=".ConnectionActivity"></activity>
+        <activity android:name=".ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

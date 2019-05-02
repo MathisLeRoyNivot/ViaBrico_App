@@ -3,7 +3,7 @@ const app = document.getElementById('list-cards')
 
 // Use the get function from the api
 const request = new XMLHttpRequest()
-request.open('GET', 'http://localhost:3000/fournisseurs', true)
+request.open('GET', 'https://viabrico-api.herokuapp.com/fournisseurs/', true)
 request.onload = function () {
     // Begin accessing JSON data here
     const data = JSON.parse(this.response)

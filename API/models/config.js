@@ -8,6 +8,13 @@ const dbName =  'owxbsewog8grckyt';
 const dbTableUsers = 'compte';
 const dbTableProviders = 'fournisseur';
 
+// MySQL Db config Local host
+// const dbHost = 'localhost';
+// const dbUsername = 'root';
+// const dbPassword = '';
+// const dbName =  'bdd-viabrico';
+// const dbTableUsers = 'compte';
+// const dbTableProviders = 'fournisseur';
 
 module.exports = {
     dbHost,
