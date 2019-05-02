@@ -1,7 +1,7 @@
 # ViaBrico - Application
 
 ## Things to do
-- [ ] Via Brico Logo
+- [x] Via Brico Logo
 
 - [x] **Front end :**
 	- [x] Login page
