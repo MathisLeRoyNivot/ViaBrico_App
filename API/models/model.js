@@ -1,4 +1,5 @@
 const db = require('./db.js');
+const bodyParser = require('body-parser');
 
 //Fournisseur object constructor
 const Provider = function (fournisseur) {
@@ -10,15 +11,15 @@ const Provider = function (fournisseur) {
 };
 
 Provider.createProvider = function createUser(newFournisseur, result) {
-    console.log(req.body);
-    db.connect(function(err) {
-        const insertProvider = "INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + req.body.name + "', '" + req.body.email + "', '" + req.body.phonenumber + "', '" + req.body.address + "', '" + req.body.description + "')";
-        db.query(insertProvider, function(err, result)  {
-            if(err) {
-                console.log(`\x1b[31m[-] Error when inserted new provider !\x1b[0m`);
-                throw err;
-            } else console.log(`\x1b[32m[+] New provider inserted !\x1b[0m`);
-        });
+    db.query("INSERT INTO `fournisseur` (`name`,`email`,`phone_number`,`address`,`description`) VALUES ('" + this.name + "', '" + this.email + "', '" + this.phoneNumber + "', '" + this.address + "', '" + this.description + "')", newFournisseur, function (err, res) {
+
+        if (err) {
+            console.log("error: ", err);
+            result(err, null);
+        } else {
+            console.log(res.insertId);
+            result(null, res.insertId);
+        };
     });
 };
 // Task.getFournisseurById = function createUser(fournisseurId, result) {
@@ -55,9 +56,9 @@ Provider.updateById = function (id, fournisseur, result) {
         }
     });
 };
-Provider.remove = function (id, result) {
-    db.query("DELETE FROM fournisseur WHERE id = ?", [id], function (err, res) {
 
+Provider.remove = function removeProvider(name, result) {
+    db.query("DELETE FROM fournisseur WHERE name = ?", [name], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);

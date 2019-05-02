@@ -32,7 +32,7 @@ const updateProvider = function(req, res) {
 };
 
 const deleteProvider = function(req, res) {
-  Provider.remove( req.params.fournisseurId, function(err, fournisseur) {
+  Provider.remove( req.params.name, function(err, fournisseur) {
     if (err) res.send(err);
     res.json({ message: 'Fournisseur successfully deleted' });
   });
