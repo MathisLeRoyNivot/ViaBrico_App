@@ -11,6 +11,7 @@ $placeholder-color: rgba(112, 112, 122, .5);
 $hr-color: #353B48;
 $icon-color: #353B48;
 $red-bin-color: #E74C3C;
+$red-logout-color: #E74C3C;
 $btn-bg-color: #84fab0;
 $form-bg-color: rgba(255, 255, 255, .35);
 
@@ -25,7 +26,7 @@ $card-list-address-size: 18px;
 $card-list-description-size: 14px;
 
 // Elements size 
-$logo-height: 80px;
+$logo-height: 85px;
 $logo-width: 150px;
 $input-height: 45px;
 $input-width: 450px;
@@ -48,7 +49,9 @@ body {
     // ---------------------------------------
     // Login Page Styles
     .div-logo {
-        background: black;
+        background-image: url('../img/ViaBrico-Logo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
         height: $logo-height;
         margin: 20px 0 0 20px;
         width: $logo-width;
@@ -276,6 +279,46 @@ body {
                 font-size: 4em;
                 transition: all .1s ease-in-out;
             }
+        }
+    }
+
+    .list-logout-form {
+        align-items: center;
+        background-color: $red-logout-color;
+        border-radius: 50%;
+        bottom: 10px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px;
+        position: fixed;
+        right: 10px;
+        transition: all .1s ease-in-out;
+        width: 60px;
+
+        &:hover {
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, .6);
+            transform: scale(1.05);
+
+            .logout {
+                transform: scale(1.05);
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;            
+        }
+
+        .logout {
+            color: #ffffff;
+            font-size: 3.4em;
         }
     }
 

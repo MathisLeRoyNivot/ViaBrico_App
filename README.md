@@ -1,7 +1,7 @@
 # ViaBrico - Application
 
 ## Things to do
-- [ ] Via Brico Logo
+- [x] Via Brico Logo
 
 - [x] **Front end :**
 	- [x] Login page
@@ -12,7 +12,7 @@
 	- [ ] ***Node.JS API***
 		- [x] GET Methods
 		- [x] POST Methods
-		- [ ] DELETE Methods
+		- [x] DELETE Methods
 		- [ ] PUT Methods
 		- [x] Adding provider Back side
 	- [x] ***MySQL Database***
@@ -22,17 +22,24 @@
 		- [ ] Login 
 		- [ ] Registration
 		- [ ] Redirection
+		- [ ] Logout
 
 - [ ] **Android App :**
 	- [ ] ***Front***
-		- [ ] Login page
-		- [ ] Provider list page
-		- [ ] Adding provider page
+		- [x] Login page
+		- [x] Provider list page
+		- [x] Adding provider page
 	- [ ] ***Functionality :***
 		- [ ] Login
 		- [ ] Register
+		- [x] List all provider
 		- [ ] Adding
 		- [ ] Edit 
+
+## Documentation
+- [**Documentation #1 : The API**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/API/README.md "Go to the API's documentation")
+- [**Documentation #2 : The Platform (Website)**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/Site%20Web/README.md "Go to the website's documentation")
+- [**Documentation #3 : The Android Mobile Application**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/APP/README.md "Go to the Android Application's documentation")
 
 ## Contributors 
 ### Here's the full list of the collaborators for this project

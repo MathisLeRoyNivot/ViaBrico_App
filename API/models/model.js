@@ -9,14 +9,14 @@ const Provider = function (provider) {
     this.address = provider.address;
     this.description = provider.description;
 };
-//User object constructor
 
+//User object constructor
 const User = function (user) {
     this.login = user.login;
     this.password = user.password;
 };
 
-// Function Add Provider
+// Function to Add a new Provider
 Provider.createProvider = function createProvider(newProvider, result) {
     // Query sql to make an insert with an array of args
     db.query("INSERT INTO fournisseur set ?", [newProvider], function (err, res) {
@@ -56,7 +56,7 @@ Provider.updateByName = function (name, description, address, phone_number, emai
     });
 };
 
-// Function delete with namz
+// Function delete with name
 Provider.remove = function removeProvider(name, result) {
     // Query sql to delete with "fournisseur"'s name
     db.query("DELETE FROM fournisseur WHERE name = ?", [name], function (err, res) {
