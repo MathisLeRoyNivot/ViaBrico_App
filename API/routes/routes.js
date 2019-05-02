@@ -11,7 +11,7 @@ module.exports = function (app) {
         .delete(todoList.deleteProvider);
     
     app.route('/users')
-        .get(todoList.listAllUsers);
+        .post(todoList.checkUser);
 };
 
 

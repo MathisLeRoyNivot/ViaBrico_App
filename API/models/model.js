@@ -10,13 +10,7 @@ const Provider = function (provider) {
     this.description = provider.description;
 };
 
-//User object constructor
-const User = function (user) {
-    this.login = user.login;
-    this.password = user.password;
-};
-
-// Function to Add a new Provider
+// Function Add Provider
 Provider.createProvider = function createProvider(newProvider, result) {
     // Query sql to make an insert with an array of args
     db.query("INSERT INTO fournisseur set ?", [newProvider], function (err, res) {
@@ -44,9 +38,9 @@ Provider.getAllProvider = function getAllProvider(result) {
 };
 
 // Function Update with name
-Provider.updateByName = function (name, description, address, phone_number, email, result) {
+Provider.updateByName = function updateByName(name, description, address, phone_number, email, result) {
     // Query sql to update the table "fournisseur"
-    db.query("UPDATE fournisseur SET name = ?, description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [name, description, address, phone_number, email], function (err, res) {
+    db.query("UPDATE fournisseur SET name = ?, description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [name, description, address, phone_number, email, name], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -56,7 +50,7 @@ Provider.updateByName = function (name, description, address, phone_number, emai
     });
 };
 
-// Function delete with name
+// Function delete with namz
 Provider.remove = function removeProvider(name, result) {
     // Query sql to delete with "fournisseur"'s name
     db.query("DELETE FROM fournisseur WHERE name = ?", [name], function (err, res) {
@@ -69,15 +63,26 @@ Provider.remove = function removeProvider(name, result) {
     });
 };
 
+
+//------------------------
+
+
+//User object constructor
+
+const User = function (user) {
+    this.login = user.login;
+    this.password = user.password;
+};
+
 // Function Get users
-User.getAllUsers = function getAllUsers(result) {
+User.check = function checkLogin(login, password, result) {
     // Query sql to select all logins and passwords
-    db.query("Select * from compte", function (err, res) {
+    db.query("SELECT * FROM compte WHERE login = ? AND password = ?",[login, password], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
         } else {
-            console.log('user : ', res);
+            console.log('Success : ', res);
             result(null, res);
         }
     });
