@@ -411,6 +411,62 @@ body a .list-add-div .add {
   transition: all .1s ease-in-out;
 }
 
+html .list-logout-form,
+body .list-logout-form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E74C3C;
+  border-radius: 50%;
+  bottom: 10px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  position: fixed;
+  right: 10px;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  width: 60px;
+}
+
+html .list-logout-form:hover,
+body .list-logout-form:hover {
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+html .list-logout-form:hover .logout,
+body .list-logout-form:hover .logout {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+html .list-logout-form button,
+body .list-logout-form button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+html .list-logout-form .logout,
+body .list-logout-form .logout {
+  color: #ffffff;
+  font-size: 3.4em;
+}
+
 html a.back,
 body a.back {
   color: #353B48;
