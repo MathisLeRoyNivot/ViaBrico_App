@@ -9,6 +9,7 @@ module.exports = function (app) {
     app.route('/providers/:name')
         .get(todoList.read_a_provider)
         .post(todoList.updateProvider)
+        .put(todoList.updateProvider)
         .delete(todoList.deleteProvider);
     
     app.route('/users')
