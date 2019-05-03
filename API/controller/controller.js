@@ -49,35 +49,48 @@ const createProvider = function (req, res) {
 
 // Use function Update Provider
 const updateProvider = function (req, res) {
-  Provider.updateByName(req.body.name, req.body.description, req.body.address, req.body.phone_number, req.body.email, function (err, provider) {
-    if (err) {
-      Provider.updateByName(req.params.name, req.params.description, req.params.address, req.params.phone_number, req.params.email, function (error, provider) {
-        if (error) {
-          res.send(error);
-        }
-        res.json({ message: 'Provider successfully modified' });
-      });
+  if (req.body.name) {
+    Provider.updateByName(req.body.name, req.body.description, req.body.address, req.body.phone_number, req.body.email, function (err, provider) {
+      if (err) {
+        res.send(err);
+      };
       res.json({ message: 'Provider successfully modified' });
-    }
-  })
+    })
+  }
+  else if (req.params.name) {
+    Provider.updateByName(req.params.name, req.params.description, req.params.address, req.params.phone_number, req.params.email, function (err, provider) {
+      if (err) {
+        res.send(err);
+      };
+      res.json({ message: 'Provider successfully modified' });
+    })
+  }
+  
 };
 
 
 
 // Use function delete Provider
 const deleteProvider = function (req, res) {
-  Provider.remove(req.body.name, function (err, provider) {
-    if (err) {
-      Provider.remove(req.params.name, function (error, provider) {
-        if (error) {
-          res.send(error);
-        };
-        res.json({ message: 'Provider successfully deleted' });
-      });
+  if (req.body.name) {
+    Provider.remove(req.body.name, function (err, provider) {
+      if (err) {
+        res.send(err);
+      }
       res.json({ message: 'Provider successfully deleted' });
-    };
-  })
+    });
+  }
+  else if (req.params.name) {
+    Provider.remove(req.params.name, function (err, provider) {
+      if (err) {
+        res.send(err);
+      }
+      res.json({ message: 'Provider successfully deleted' });
+    });
+  }
+  
 };
+
 
 
 // Use function get Users
@@ -92,21 +105,42 @@ const deleteProvider = function (req, res) {
 
 //Check if username/password couple is in Database
 const checkUser = function (req, res) {
-  User.check(req.body.login, req.body.password, function (err, user) {
-    if (err) res.send(err);
-    if (user[0]) {
-      res.json(
-        {
-          "login": user[0].login,
-          "password": user[0].password
-        }
-      );
-    }
-    else {
-      res.json({ "message": "Incorrect login or password" })
-    }
-
-  });
+  
+  if (req.body.login) {
+    User.check(req.body.login, req.body.password, function (err, user) {
+      if (err) res.send(err);
+      if (user[0]) {
+        res.json(
+          {
+            "login": user[0].login,
+            "password": user[0].password
+          }
+        );
+      }
+      else {
+        res.json({ "message": "Incorrect login or password" })
+      }
+  
+    });
+  }
+  else if (req.params.login) {
+    User.check(req.params.login, req.params.password, function (err, user) {
+      if (err) res.send(err);
+      if (user) {
+        res.json(
+          {
+            "login": user.login,
+            "password": user.password
+          }
+        );
+      }
+      else {
+        res.json({ "message": "Incorrect login or password" })
+      }
+  
+    });
+  }
+  
 };
 
 
