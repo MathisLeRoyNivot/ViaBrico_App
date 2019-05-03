@@ -10,6 +10,16 @@ const listAllProviders = function(req, res) {
 };
 
 
+const read_a_provider = function(req, res) {
+  Provider.getProviderByName(req.body.name, function(err, provider) {
+    if (err)
+      res.send(err);
+    res.json(provider);
+  });
+};
+
+
+
 // Use function createProvider
 const createProvider = function(req, res) {
   const name = req.body.name;
@@ -90,5 +100,6 @@ module.exports = {
   createProvider,
   updateProvider,
   deleteProvider,
-  checkUser
+  checkUser,
+  read_a_provider
 }
