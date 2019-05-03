@@ -83,6 +83,9 @@ public class ConnectionActivity extends Activity {
 
                 //Http Client
                 AsyncHttpClient client = new AsyncHttpClient();
+                client.setConnectTimeout(20000);
+                client.setMaxRetriesAndTimeout(10, 20000);
+                client.setResponseTimeout(20000);
 
                 //Parameters
                 final RequestParams requestParams = new RequestParams();
@@ -98,9 +101,6 @@ public class ConnectionActivity extends Activity {
                         String response = new String(responseBody);
                         try {
                             responseJSON = new JSONObject(response);
-                            Log.i("coucou", requestParams.toString());
-                            Log.i("coucou", responseJSON.toString());
-
 
                             if (responseJSON.has("login") && responseJSON.has("password")) {
                                 Toast.makeText(ConnectionActivity.this, "Vous êtes connectés !", Toast.LENGTH_SHORT).show();
