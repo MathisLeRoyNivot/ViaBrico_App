@@ -110,6 +110,7 @@ public class ConnectionActivity extends Activity {
                                 startActivity(intent);
                                 overridePendingTransition(R.anim.page_slide_horizontal_in,
                                         R.anim.page_slide_horizontal_out);
+                                finish();
                             }
                             else {
                                 Toast.makeText(ConnectionActivity.this, "Identifiant/Mot de passe Incorrect !", Toast.LENGTH_SHORT).show();

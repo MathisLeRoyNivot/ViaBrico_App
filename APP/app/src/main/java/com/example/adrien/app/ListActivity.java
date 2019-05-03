@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,6 +32,7 @@ public class ListActivity extends Activity {
 
     private RecyclerView recyclerView;
     private ImageButton button_add;
+    private ImageButton button_logout;
     private ProviderAdapter providerAdapter = null;
     private JSONArray calledJSON;
     private JSONObject forJsonObject;
@@ -45,8 +47,9 @@ public class ListActivity extends Activity {
         //Catch IDs
         recyclerView = findViewById(R.id.recyclerviewid);
         button_add = findViewById(R.id.button_add);
+        button_logout = findViewById(R.id.button_logout);
 
-        //OnClick Listener on ImageButton
+        //OnClick Listeners on ImageButtons
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +57,16 @@ public class ListActivity extends Activity {
                 startActivity(intent);
                 overridePendingTransition(R.anim.page_slide_horizontal_in,
                         R.anim.page_slide_horizontal_out);
+
+            }
+        });
+
+        button_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListActivity.this, ConnectionActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
