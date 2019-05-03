@@ -24,16 +24,17 @@
 		- [ ] Redirection
 		- [ ] Logout
 
-- [ ] **Android App :**
+- [X] **Android App :**
 	- [x] ***Front***
 		- [x] Login page
 		- [x] Provider list page
 		- [x] Adding provider page
-	- [ ] ***Functionality :***
+	- [X] ***Functionality :***
 		- [x] Login
+		- [x] Logout
 		- [ ] Register
 		- [x] List all provider
-		- [ ] Adding
+		- [X] Adding
 		- [x] Edit 
 
 ## Documentation
