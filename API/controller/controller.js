@@ -123,14 +123,14 @@ const checkUser = function (req, res) {
   
     });
   }
-  else if (req.params.login) {
-    User.check(req.params.login, req.params.password, function (err, user) {
+  else if (req.query.login) {
+    User.check(req.query.login, req.query.password, function (err, user) {
       if (err) res.send(err);
-      if (user) {
+      if (typeof(user[0]) != 'undefined') {
         res.json(
           {
-            "login": user.login,
-            "password": user.password
+            "login": user[0].login,
+            "password": user[0].password
           }
         );
       }
