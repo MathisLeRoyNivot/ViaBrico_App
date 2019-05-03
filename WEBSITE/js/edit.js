@@ -18,10 +18,10 @@ function editProvider(obj) {
 
     // Create inputs instead of p with the original data
     const container = document.createElement('div')
-    container.setAttribute('class', 'list-card')
+    container.setAttribute('class', 'list-edit')
 
     const line1 = document.createElement('div')
-    line1.setAttribute('class', 'list-card-line1')
+    line1.setAttribute('class', 'list-edit-line1')
 
     const p = document.createElement('p')
     p.setAttribute('class', 'edit-name')
@@ -41,13 +41,8 @@ function editProvider(obj) {
     input3.setAttribute('placeholder', 'Téléphone')
     input3.setAttribute('value', originPhone);
 
-    const button = document.createElement('button')
-    button.setAttribute('class', '')
-    button.setAttribute('onClick', 'sendEdit()')
-    button.textContent = 'Valider'
-
     const line2 = document.createElement('div');
-    line2.setAttribute('class', 'list-card-line2');
+    line2.setAttribute('class', 'list-edit-line2');
 
     const input4 = document.createElement('input')
     input4.setAttribute('class', 'edit-address')
@@ -56,8 +51,13 @@ function editProvider(obj) {
     input4.setAttribute('placeholder', 'Adresse')
     input4.setAttribute('value', originAddress);
 
+    const button = document.createElement('button')
+    button.setAttribute('class', '')
+    button.setAttribute('onClick', 'sendEdit()')
+    button.textContent = 'Valider'
+
     const line3 = document.createElement('div');
-    line3.setAttribute('class', 'list-card-line3');
+    line3.setAttribute('class', 'list-edit-line3');
 
     const input5 = document.createElement('textarea')
     input5.setAttribute('class', 'edit-description')
@@ -71,9 +71,9 @@ function editProvider(obj) {
     line1.appendChild(p)
     line1.appendChild(input2)
     line1.appendChild(input3)
-    line1.appendChild(button)
     container.appendChild(line2)
     line2.appendChild(input4)
+    line2.appendChild(button)
     container.appendChild(line3)
     line3.appendChild(input5)
 }
