@@ -2,11 +2,11 @@
 
 To use the app, you have to install the `.apk` first.
 
-# Usage
+# Usage - All pages of the application
 
 Login Page             |  Provider List Page
 :-------------------------:|:-------------------------:
-![Login](img/login.png)  |  ![Provider List](img/provider_list.png)
+![Login](img/login.PNG)  |  ![Provider List](img/provider_list.PNG)
 
 Edit Provider Page             |  Adding Provider Page
 :-------------------------:|:-------------------------:
