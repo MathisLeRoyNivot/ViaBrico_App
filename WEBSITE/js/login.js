@@ -108,28 +108,25 @@ function connexion() {
     //Initialization of request
 
 
+
+
     var request = new XMLHttpRequest();
-    //Method post
-    request.open('POST', "https://viabrico-api.herokuapp.com/users/", true);
-    //Send request with data
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send(JSON.stringify({ "login": login, "password": passhash }));
-    alert("after send")
-    request.addEventListener('readystatechange', function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            console.log(myArr);
-            //redirection 
-            if (myArr.length > 0) {
-                window.location.href = "./pages/list.html";
+
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            var responsejson = JSON.parse(this.responseText);
+            if (responsejson.login && responsejson.password) {
+                console.log(responsejson);
+                window.location.replace("http://127.0.0.1:5500/WEBSITE/pages/list.html")
             }
             else {
-                console.log(this.status)
+                alert("Identifiant/Mot de passe Incorrect")
             }
         }
-        else {
-            alert(this.readyState)
-        }
-    });
+    };
+    //Method post
+    request.open('POST', "https://viabrico-api.herokuapp.com/users/", true);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send("login=" + login.value + "&password=" + passhash); 
 
 }

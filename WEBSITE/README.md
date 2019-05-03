@@ -1,10 +1,10 @@
 # Installation
 
-To go to the site, you have to access <`website link`>
+To launch the site, you just have to open `index.html` in your favorite Web Browser.
 
 # Usage
 
-![Provider List]()
+
 
 After being connected, you can access to all providers of the enterprise.
 You are allowed to add, edit and delete them as you want.
