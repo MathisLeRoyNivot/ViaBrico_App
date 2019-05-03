@@ -2,6 +2,7 @@ let originName = null;
 
 function editProvider(obj) {
 
+    // Collect original data from the provider
     originName = obj.parentNode.parentNode.parentNode.firstChild.firstChild.innerText;
     const originEmail = obj.parentNode.parentNode.parentNode.firstChild.firstChild.nextSibling.innerText;
     const originPhone = obj.parentNode.parentNode.parentNode.firstChild.firstChild.nextSibling.nextSibling.innerText;
@@ -15,24 +16,16 @@ function editProvider(obj) {
     }
     reference.parentNode.removeChild(reference);
 
-
+    // Create inputs instead of p with the original data
     const container = document.createElement('div')
     container.setAttribute('class', 'list-card')
-
-    const form = document.createElement('form')
-    form.setAttribute('class', 'edit-form')
-    form.setAttribute('method', 'POST')
-    form.setAttribute('action', `https://viabrico-api.herokuapp.com/providers/${originName}`)
 
     const line1 = document.createElement('div')
     line1.setAttribute('class', 'list-card-line1')
 
-    const input1 = document.createElement('input')
-    input1.setAttribute('class', 'edit-name')
-    input1.setAttribute('type', 'text')
-    input1.setAttribute('id', 'name')
-    input1.setAttribute('placeholder', 'Nom')
-    input1.setAttribute('value', originName);
+    const p = document.createElement('p')
+    p.setAttribute('class', 'edit-name')
+    p.textContent = originName;
 
     const input2 = document.createElement('input')
     input2.setAttribute('class', 'edit-email')
@@ -44,14 +37,13 @@ function editProvider(obj) {
     const input3 = document.createElement('input')
     input3.setAttribute('class', 'edit-phone')
     input3.setAttribute('type', 'text')
-    input3.setAttribute('id', 'phone-number')
+    input3.setAttribute('id', 'phone_number')
     input3.setAttribute('placeholder', 'Téléphone')
     input3.setAttribute('value', originPhone);
 
     const button = document.createElement('button')
     button.setAttribute('class', '')
-    button.setAttribute('type', 'submit')
-    //button.setAttribute('onClick', 'sendEdit()')
+    button.setAttribute('onClick', 'sendEdit()')
     button.textContent = 'Valider'
 
     const line2 = document.createElement('div')
@@ -74,39 +66,42 @@ function editProvider(obj) {
     input5.setAttribute('placeholder', 'Description')
     input5.textContent = originDescription;
 
-
     app.appendChild(container)
-    container.appendChild(form)
-    form.appendChild(line1)
-    line1.appendChild(input1)
+    container.appendChild(line1)
+    line1.appendChild(p)
     line1.appendChild(input2)
     line1.appendChild(input3)
     line1.appendChild(button)
-    form.appendChild(line2)
+    container.appendChild(line2)
     line2.appendChild(input4)
-    form.appendChild(line3)
+    container.appendChild(line3)
     line3.appendChild(input5)
-
 }
 
 
-// function sendEdit() {
+function sendEdit() {
 
+    // Collect new data from the form
+    const email = document.getElementById("email").value;
+    const phone_number = document.getElementById("phone_number").value;
+    const address = document.getElementById("address").value;
+    const description = document.getElementById("description").value;
 
-//     // Collect data from the form
-//     let name = document.getElementById("name").innerText;
-//     let email = document.getElementById("email").innerText;
-//     let phone_number = document.getElementById("phone-number").innerText;
-//     let address = document.getElementById("address").innerText;
-//     let description = document.getElementById("description").innerText;
-
-
-
-//     const urlEditProvider = `https://viabrico-api.herokuapp.com/providers/${originName}`;
-//     let request = new XMLHttpRequest();
-//     request.open('PUT', urlEditProvider, true);
-//     request.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
-//     request.send(JSON.stringify(name, email, phone_number, address, description));
-//     // Status
-//     console.log(request.readyState);
-// }
+    // Use the api put request
+    const urlEditProvider = `https://viabrico-api.herokuapp.com/providers/${originName}`;
+    let request = new XMLHttpRequest();
+    request.open('PUT', urlEditProvider, true);
+    request.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+    request.send(JSON.stringify({ "name": originName, "email": email, "phone_number": phone_number, "address": address, "description": description }));
+    // Status
+    console.log(request.readyState);
+    request.onload = function () {
+        if (request.status >= 200 && request.status < 400) {
+            // Reload the page after the edit done
+            document.location.reload(true);
+        }
+        else {
+            console.log("Erreur");
+        }
+    }
+}
