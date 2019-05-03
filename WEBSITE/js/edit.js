@@ -1,4 +1,4 @@
-    let originName = null;
+let originName = null;
 
 function editProvider(obj) {
 
