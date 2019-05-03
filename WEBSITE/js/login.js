@@ -119,6 +119,9 @@ function connexion() {
                 console.log(responsejson);
                 window.location.replace("http://127.0.0.1:5500/WEBSITE/pages/list.html")
             }
+            else {
+                alert("Identifiant/Mot de passe Incorrect")
+            }
         }
     };
     //Method post
