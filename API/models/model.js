@@ -39,10 +39,10 @@ Provider.getAllProvider = function getAllProvider(result) {
 
 
 Provider.getProviderByName = function getProvider(name, result) {
-    sql.query("Select * from fournisseur where name = ? ", [name], function (err, res) {
+    db.query("SELECT * FROM fournisseur WHERE name = ? ", [name], function (err, res) {
         if (err) {
             console.log("error: ", err);
-            result(err, null);
+            result(null, err);
         }
         else {
             result(null, res);
