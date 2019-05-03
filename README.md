@@ -9,11 +9,11 @@
 	- [x] Adding provider page 
 
 - [ ] **Back end :**
-	- [ ] ***Node.JS API***
+	- [x] ***Node.JS API***
 		- [x] GET Methods
 		- [x] POST Methods
 		- [x] DELETE Methods
-		- [ ] PUT Methods
+		- [x] PUT Methods
 		- [x] Adding provider Back side
 	- [x] ***MySQL Database***
 		- [x] Table : membre
@@ -36,6 +36,11 @@
 		- [x] List all provider
 		- [X] Adding
 		- [x] Edit 
+		
+- [ ] **Documentation**
+	- [ ] ***APP***
+	- [ ] ***WEBSITE***
+	- [ ] ***API***
 
 ## Documentation
 - [**Documentation #1 : The API**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/API/README.md "Go to the API's documentation")

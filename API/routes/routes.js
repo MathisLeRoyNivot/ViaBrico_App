@@ -13,7 +13,7 @@ module.exports = function (app) {
         .delete(todoList.deleteProvider);
     
     app.route('/users')
-        .post(todoList.checkUser);
+        .post(todoList.checkUser)
 };
 
 

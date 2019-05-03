@@ -16,7 +16,8 @@ $btn-bg-color: #84fab0;
 $form-bg-color: rgba(255, 255, 255, .35);
 
 // Font-family & size
-$main-font: "Montserrat", sans-serif;
+$main-font: "Montserrat",
+sans-serif;
 $form-title-size: 2em;
 $form-input-size: 1.1em;
 $card-list-name-size: 23px;
@@ -209,7 +210,7 @@ body {
                     .pen {
                         font-size: 30px;
                     }
-                }  
+                }
             }
 
             .list-card-line2 {
@@ -222,26 +223,26 @@ body {
                     font-size: $card-list-address-size;
                 }
             }
-            
+
             .list-card-line3 {
                 display: flex;
                 justify-content: space-between;
                 margin: 10px;
                 color: #353B48;
-    
+
                 p {
                     font-size: $card-list-description-size;
                 }
-    
+
                 .bin {
                     color: $red-bin-color;
                     font-size: 30px;
                     transition: all .1s ease-in-out;
-    
+
                     &:hover {
                         transform: scale(1.1);
                     }
-    
+
                 }
             }
         }
@@ -313,7 +314,7 @@ body {
             border-radius: 50%;
             cursor: pointer;
             height: 100%;
-            width: 100%;            
+            width: 100%;
         }
 
         .logout {
@@ -322,7 +323,131 @@ body {
         }
     }
 
-    
+
+    // ---------------------------------------
+    // Edit page style
+
+    .list-edit {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: $shadow-div;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        padding: 15px;
+        width: 60%;
+
+        .list-edit-line1 {
+            color: $text-color;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px 0px 10px;
+
+            p {
+                font-weight: bold;
+                font-size: $card-list-name-size;
+                line-height: $card-list-name-size;
+            }
+
+            input {
+                border: none;
+                border-radius: $input-radius;
+                box-shadow: $shadow-input;
+                font-family: $main-font;
+                font-size: 1.05em;
+                height: $input-height;
+                margin-bottom: 20px;
+                outline: none;
+                padding: 0px 15px;
+                resize: none;
+                text-indent: 45px;
+                width: $input-width;
+
+                &::placeholder {
+                    color: $placeholder-color;
+                    font-family: $main-font;
+                    font-size: 1.1em;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .list-edit-line2 {
+            color: $text-color;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px 0px 10px;
+
+            input {
+                border: none;
+                border-radius: $input-radius;
+                box-shadow: $shadow-input;
+                font-family: $main-font;
+                font-size: 1.05em;
+                height: $input-height;
+                margin-bottom: 20px;
+                outline: none;
+                padding: 0px 15px;
+                resize: none;
+                text-indent: 45px;
+                width: $input-width;
+
+                &::placeholder {
+                    color: $placeholder-color;
+                    font-family: $main-font;
+                    font-size: 1.1em;
+                    letter-spacing: 2px;
+                }
+            }
+
+            button {
+                background-color: $btn-bg-color;
+                border: none;
+                border-radius: $btn-radius;
+                box-shadow: $shadow-btn;
+                color: $text-color;
+                cursor: pointer;
+                font-family: $main-font;
+                font-size: 1em;
+                font-weight: bold;
+                height: $btn-height;
+                letter-spacing: 1.5px;
+                margin-bottom: 25px;
+                width: $btn-width;
+            }
+        }
+
+        .list-edit-line3 {
+            color: $text-color;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px 0px 10px;
+
+            textarea {
+                border: none;
+                border-radius: $input-radius;
+                box-shadow: $shadow-input;
+                font-family: $main-font;
+                font-size: 1.05em;
+                height: $input-height;
+                margin-bottom: 20px;
+                outline: none;
+                padding: 10px 15px;
+                resize: none;
+                text-indent: 45px;
+                width: $input-width;
+
+                &::placeholder {
+                    color: $placeholder-color;
+                    font-family: $main-font;
+                    font-size: 1.1em;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+
     // ---------------------------------------
     // Adding Page Styles
     a.back {
@@ -345,7 +470,7 @@ body {
         &:hover {
             background: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
-            box-shadow: $shadow-div;            
+            box-shadow: $shadow-div;
         }
 
         p {
@@ -353,6 +478,7 @@ body {
             font-size: 1.2em;
             line-height: 30px;
         }
+
         i {
             font-size: 2em;
             line-height: 30px;
@@ -365,7 +491,7 @@ body {
         display: flex;
         justify-content: center;
         font-family: $main-font;
-        margin: 50px  auto;
+        margin: 50px auto;
         width: 600px;
 
         .add-form {
