@@ -25,16 +25,16 @@
 		- [ ] Logout
 
 - [ ] **Android App :**
-	- [ ] ***Front***
+	- [x] ***Front***
 		- [x] Login page
 		- [x] Provider list page
 		- [x] Adding provider page
 	- [ ] ***Functionality :***
-		- [ ] Login
+		- [x] Login
 		- [ ] Register
 		- [x] List all provider
 		- [ ] Adding
-		- [ ] Edit 
+		- [x] Edit 
 
 ## Documentation
 - [**Documentation #1 : The API**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/API/README.md "Go to the API's documentation")
