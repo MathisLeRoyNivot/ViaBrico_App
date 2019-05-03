@@ -54,18 +54,21 @@ const updateProvider = function (req, res) {
       if (err) {
         res.send(err);
       };
-      res.json({ message: 'Provider successfully modified' });
+      res.json({
+        message: 'Provider successfully modified'
+      });
     })
-  }
-  else if (req.params.name) {
+  } else if (req.params.name) {
     Provider.updateByName(req.params.name, req.params.description, req.params.address, req.params.phone_number, req.params.email, function (err, provider) {
       if (err) {
         res.send(err);
       };
-      res.json({ message: 'Provider successfully modified' });
+      res.json({
+        message: 'Provider successfully modified'
+      });
     })
   }
-  
+
 };
 
 
@@ -77,73 +80,61 @@ const deleteProvider = function (req, res) {
       if (err) {
         res.send(err);
       }
-      res.json({ message: 'Provider successfully deleted' });
+      res.json({
+        message: 'Provider successfully deleted'
+      });
     });
-  }
-  else if (req.params.name) {
+  } else if (req.params.name) {
     Provider.remove(req.params.name, function (err, provider) {
       if (err) {
         res.send(err);
       }
-      res.json({ message: 'Provider successfully deleted' });
+      res.json({
+        message: 'Provider successfully deleted'
+      });
     });
   }
-  
+
 };
-
-
-
-// Use function get Users
-// const listAllUsers = function(req, res) {
-//   User.getAllUsers(function(err, user) {
-//     console.log('controller')
-//     if (err) res.send(err);
-//     console.log('erreur', user);
-//     res.send(user);
-//   });
-// };
 
 //Check if username/password couple is in Database
 const checkUser = function (req, res) {
-  
+
   if (req.body.login) {
     User.check(req.body.login, req.body.password, function (err, user) {
       if (err) res.send(err);
       if (user[0]) {
-        res.json(
-          {
-            "login": user[0].login,
-            "password": user[0].password
-          }
-        );
+        res.json({
+          "login": user[0].login,
+          "password": user[0].password
+        });
+      } else {
+        res.json({
+          "message": "Incorrect login or password"
+        })
       }
-      else {
-        res.json({ "message": "Incorrect login or password" })
-      }
-  
+
     });
-  }
-  else if (req.query.login) {
+  } else if (req.query.login) {
     User.check(req.query.login, req.query.password, function (err, user) {
       if (err) res.send(err);
-      if (typeof(user[0]) != 'undefined') {
-        res.json(
-          {
-            "login": user[0].login,
-            "password": user[0].password
-          }
-        );
+      if (typeof (user[0]) != 'undefined') {
+        res.json({
+          "login": user[0].login,
+          "password": user[0].password
+        });
+      } else {
+        res.json({
+          "message": "Incorrect login or password"
+        })
       }
-      else {
-        res.json({ "message": "Incorrect login or password" })
-      }
-  
+
     });
   }
-  
+
 };
 
-
+// Exportation des méthodes
 module.exports = {
   listAllProviders,
   createProvider,

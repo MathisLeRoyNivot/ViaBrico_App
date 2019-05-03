@@ -16,6 +16,7 @@ const dbTableProviders = 'fournisseur';
 // const dbTableUsers = 'compte';
 // const dbTableProviders = 'fournisseur';
 
+// Exportation des variables
 module.exports = {
     dbHost,
     dbUsername,
