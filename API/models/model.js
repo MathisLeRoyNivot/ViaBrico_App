@@ -18,8 +18,8 @@ Provider.createProvider = function createProvider(newProvider, result) {
             console.log("error: ", err);
             result(err, null);
         } else {
-            console.log(`New provider #${res.insertId} successfuly inserted`);
-            result(null, res.redirect('./list.html'));
+            console.log(res.insertId);
+            result(null, res.insertId);
         };
     });
 };
@@ -39,10 +39,10 @@ Provider.getAllProvider = function getAllProvider(result) {
 
 
 Provider.getProviderByName = function getProvider(name, result) {
-    sql.query("Select * from fournisseur where name = ? ", [name], function (err, res) {
+    db.query("SELECT * FROM fournisseur WHERE name = ? ", [name], function (err, res) {
         if (err) {
             console.log("error: ", err);
-            result(err, null);
+            result(null, err);
         }
         else {
             result(null, res);
@@ -54,7 +54,7 @@ Provider.getProviderByName = function getProvider(name, result) {
 // Function Update with name
 Provider.updateByName = function updateByName(name, description, address, phone_number, email, result) {
     // Query sql to update the table "fournisseur"
-    db.query("UPDATE fournisseur SET name = ?, description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [name, description, address, phone_number, email, name], function (err, res) {
+    db.query("UPDATE fournisseur SET description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [description, address, phone_number, email, name], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
@@ -79,6 +79,8 @@ Provider.remove = function removeProvider(name, result) {
 
 
 //------------------------
+
+
 //User object constructor
 
 const User = function (user) {
