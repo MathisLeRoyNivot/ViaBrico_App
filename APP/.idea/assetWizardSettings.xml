@@ -45,8 +45,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/baseline-delete-24px.svg" />
-                                      <entry key="outputName" value="delete_icon" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/baseline-exit_to_app-24px.svg" />
+                                      <entry key="outputName" value="logout_icon" />
                                       <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>

@@ -69,6 +69,9 @@ public class AddProviderActivity extends Activity {
 
                 //Http Client
                 AsyncHttpClient client = new AsyncHttpClient();
+                client.setConnectTimeout(20000);
+                client.setMaxRetriesAndTimeout(10, 20000);
+                client.setResponseTimeout(20000);
 
                 //Parameters
                 RequestParams requestParams = new RequestParams();

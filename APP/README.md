@@ -4,7 +4,13 @@ To use the app, you have to install the `.apk` first.
 
 # Usage
 
-![Provider List](img/provider_list.png)
+Login Page             |  Provider List Page
+:-------------------------:|:-------------------------:
+![Login](img/login.png)  |  ![Provider List](img/provider_list.png)
+
+Edit Provider Page             |  Adding Provider Page
+:-------------------------:|:-------------------------:
+![Provider Edit](img/provider_edit.png)  |  ![Provider List](img/provider_add.png)
 
 After being connected, you can access to all providers of the enterprise.
 You are allowed to add, edit and delete them as you want.

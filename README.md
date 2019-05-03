@@ -24,21 +24,22 @@
 		- [ ] Redirection
 		- [ ] Logout
 
-- [ ] **Android App :**
-	- [ ] ***Front***
+- [X] **Android App :**
+	- [x] ***Front***
 		- [x] Login page
 		- [x] Provider list page
 		- [x] Adding provider page
-	- [ ] ***Functionality :***
-		- [ ] Login
+	- [X] ***Functionality :***
+		- [x] Login
+		- [x] Logout
 		- [ ] Register
 		- [x] List all provider
-		- [ ] Adding
-		- [ ] Edit 
+		- [X] Adding
+		- [x] Edit 
 
 ## Documentation
 - [**Documentation #1 : The API**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/API/README.md "Go to the API's documentation")
-- [**Documentation #2 : The Platform (Website)**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/Site%20Web/README.md "Go to the website's documentation")
+- [**Documentation #2 : The Platform (Website)**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/WEBSITE/README.md "Go to the website's documentation")
 - [**Documentation #3 : The Android Mobile Application**](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/APP/README.md "Go to the Android Application's documentation")
 
 ## Contributors 

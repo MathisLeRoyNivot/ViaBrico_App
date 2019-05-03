@@ -262,7 +262,7 @@ body #list-cards .list-card {
           flex-direction: column;
   margin: 15px;
   padding: 15px;
-  width: 50%;
+  width: 60%;
 }
 
 html #list-cards .list-card .list-card-line1,
@@ -469,6 +469,232 @@ body .list-logout-form .logout {
   font-size: 3.4em;
 }
 
+html .list-edit,
+body .list-edit {
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 15px;
+  padding: 15px;
+  width: 60%;
+}
+
+html .list-edit .list-edit-line1,
+body .list-edit .list-edit-line1 {
+  color: #353B48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 10px 0px 10px;
+}
+
+html .list-edit .list-edit-line1 p,
+body .list-edit .list-edit-line1 p {
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 23px;
+}
+
+html .list-edit .list-edit-line1 input,
+body .list-edit .list-edit-line1 input {
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05em;
+  height: 45px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 15px;
+  resize: none;
+  text-indent: 45px;
+  width: 450px;
+}
+
+html .list-edit .list-edit-line1 input::-webkit-input-placeholder,
+body .list-edit .list-edit-line1 input::-webkit-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line1 input:-ms-input-placeholder,
+body .list-edit .list-edit-line1 input:-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line1 input::-ms-input-placeholder,
+body .list-edit .list-edit-line1 input::-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line1 input::placeholder,
+body .list-edit .list-edit-line1 input::placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line2,
+body .list-edit .list-edit-line2 {
+  color: #353B48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 10px 0px 10px;
+}
+
+html .list-edit .list-edit-line2 input,
+body .list-edit .list-edit-line2 input {
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05em;
+  height: 45px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 15px;
+  resize: none;
+  text-indent: 45px;
+  width: 450px;
+}
+
+html .list-edit .list-edit-line2 input::-webkit-input-placeholder,
+body .list-edit .list-edit-line2 input::-webkit-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line2 input:-ms-input-placeholder,
+body .list-edit .list-edit-line2 input:-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line2 input::-ms-input-placeholder,
+body .list-edit .list-edit-line2 input::-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line2 input::placeholder,
+body .list-edit .list-edit-line2 input::placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line2 button,
+body .list-edit .list-edit-line2 button {
+  background-color: #84fab0;
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  color: #353B48;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  height: 40px;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  width: 180px;
+}
+
+html .list-edit .list-edit-line3,
+body .list-edit .list-edit-line3 {
+  color: #353B48;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 10px 0px 10px;
+}
+
+html .list-edit .list-edit-line3 textarea,
+body .list-edit .list-edit-line3 textarea {
+  border: none;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05em;
+  height: 45px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 10px 15px;
+  resize: none;
+  text-indent: 45px;
+  width: 450px;
+}
+
+html .list-edit .list-edit-line3 textarea::-webkit-input-placeholder,
+body .list-edit .list-edit-line3 textarea::-webkit-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line3 textarea:-ms-input-placeholder,
+body .list-edit .list-edit-line3 textarea:-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line3 textarea::-ms-input-placeholder,
+body .list-edit .list-edit-line3 textarea::-ms-input-placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
+html .list-edit .list-edit-line3 textarea::placeholder,
+body .list-edit .list-edit-line3 textarea::placeholder {
+  color: rgba(112, 112, 122, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+
 html a.back,
 body a.back {
   color: #353B48;
@@ -525,7 +751,7 @@ body .add-div-connexion {
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Montserrat", sans-serif;
-  margin: 50px  auto;
+  margin: 50px auto;
   width: 600px;
 }
 
@@ -684,4 +910,3 @@ body .add-div-connexion .add-form button[type="submit"] {
   margin-bottom: 25px;
   width: 180px;
 }
-/*# sourceMappingURL=main.css.map */

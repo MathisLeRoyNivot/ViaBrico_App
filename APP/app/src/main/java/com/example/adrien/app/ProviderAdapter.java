@@ -107,6 +107,9 @@ public class ProviderAdapter extends RecyclerView.Adapter<ProviderAdapter.Provid
 
                         //Http Client
                         AsyncHttpClient client = new AsyncHttpClient();
+                        client.setConnectTimeout(20000);
+                        client.setMaxRetriesAndTimeout(10, 20000);
+                        client.setResponseTimeout(20000);
 
                         //Parameters
                         RequestParams requestParams = new RequestParams();
@@ -121,8 +124,8 @@ public class ProviderAdapter extends RecyclerView.Adapter<ProviderAdapter.Provid
                                 Toast.makeText(itemView.getContext(), "Fournisseur supprimé !", Toast.LENGTH_SHORT).show();
 
                                 //Refresh Activity
-                                Intent intent = new Intent(itemView.getContext(), ListActivity.class);
-                                itemView.getContext().startActivity(intent);
+                                providerList.remove(getAdapterPosition());
+                                notifyDataSetChanged();
 
                             }
 

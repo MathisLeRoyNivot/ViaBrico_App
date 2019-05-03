@@ -83,6 +83,9 @@ public class EditProviderActivity extends Activity {
 
                 //Http Client
                 AsyncHttpClient client = new AsyncHttpClient();
+                client.setConnectTimeout(20000);
+                client.setMaxRetriesAndTimeout(10, 20000);
+                client.setResponseTimeout(20000);
 
                 //Parameters
                 RequestParams requestParams = new RequestParams();
@@ -91,12 +94,6 @@ public class EditProviderActivity extends Activity {
                 requestParams.put("address", address);
                 requestParams.put("phone_number", phone);
                 requestParams.put("email", email);
-
-                Log.i("name", name);
-                Log.i("email", email);
-                Log.i("phone", phone);
-                Log.i("address", address);
-                Log.i("description", description);
 
 
                 //Call

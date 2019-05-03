@@ -37,10 +37,24 @@ Provider.getAllProvider = function getAllProvider(result) {
     });
 };
 
+
+Provider.getProviderByName = function getProvider(name, result) {
+    db.query("SELECT * FROM fournisseur WHERE name = ? ", [name], function (err, res) {
+        if (err) {
+            console.log("error: ", err);
+            result(null, err);
+        }
+        else {
+            result(null, res);
+
+        }
+    });
+};
+
 // Function Update with name
 Provider.updateByName = function updateByName(name, description, address, phone_number, email, result) {
     // Query sql to update the table "fournisseur"
-    db.query("UPDATE fournisseur SET name = ?, description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [name, description, address, phone_number, email, name], function (err, res) {
+    db.query("UPDATE fournisseur SET description = ?, address = ?, phone_number = ?, email = ? WHERE name = ?", [description, address, phone_number, email, name], function (err, res) {
         if (err) {
             console.log("error: ", err);
             result(null, err);
