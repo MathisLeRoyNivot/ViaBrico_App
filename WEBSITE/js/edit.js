@@ -22,45 +22,45 @@ function editProvider(obj) {
     reference.parentNode.removeChild(reference);
 
 
-    const container = document.createElement('div')
-    container.setAttribute('class', 'list-card')
+    const container = document.createElement('div');
+    container.setAttribute('class', 'list-card');
 
-    const line1 = document.createElement('div')
-    line1.setAttribute('class', 'list-card-line1')
+    const line1 = document.createElement('div');
+    line1.setAttribute('class', 'list-card-line1');
 
-    const input1 = document.createElement('input')
-    input1.setAttribute('class', '')
-    input1.setAttribute('type', 'text')
+    const input1 = document.createElement('input');
+    input1.setAttribute('class', '');
+    input1.setAttribute('type', 'text');
     input1.setAttribute('value', originName);
 
-    const input2 = document.createElement('input')
-    input2.setAttribute('class', '')
-    input2.setAttribute('type', 'text')
+    const input2 = document.createElement('input');
+    input2.setAttribute('class', '');
+    input2.setAttribute('type', 'text');
     input2.setAttribute('value', originEmail);
 
-    const input3 = document.createElement('input')
-    input3.setAttribute('class', '')
-    input3.setAttribute('type', 'text')
+    const input3 = document.createElement('input');
+    input3.setAttribute('class', '');
+    input3.setAttribute('type', 'text');
     input3.setAttribute('value', originPhone);
 
-    const button = document.createElement('button')
-    button.setAttribute('class', '')
-    button.textContent = 'Valider'
+    const button = document.createElement('button');
+    button.setAttribute('class', '');
+    button.textContent = 'Valider';
 
-    const line2 = document.createElement('div')
-    line2.setAttribute('class', 'list-card-line2')
+    const line2 = document.createElement('div');
+    line2.setAttribute('class', 'list-card-line2');
 
-    const input4 = document.createElement('input')
-    input4.setAttribute('class', '')
-    input4.setAttribute('type', 'text')
+    const input4 = document.createElement('input');
+    input4.setAttribute('class', '');
+    input4.setAttribute('type', 'text');
     input4.setAttribute('value', originAddress);
 
-    const line3 = document.createElement('div')
-    line3.setAttribute('class', 'list-card-line3')
+    const line3 = document.createElement('div');
+    line3.setAttribute('class', 'list-card-line3');
 
-    const input5 = document.createElement('textarea')
-    input5.setAttribute('class', '')
-    input5.setAttribute('type', 'text')
+    const input5 = document.createElement('textarea');
+    input5.setAttribute('class', '');
+    input5.setAttribute('type', 'text');
     input5.textContent = originDescription;
 
 
@@ -72,7 +72,7 @@ function editProvider(obj) {
         <div class="add-email">
             <span class="input-group-addon"><i class="material-icons">alternate_email</i></span>
             <input type="email" id="email" name="email" placeholder="Email" required/>
-        </div >
+        </div>
         <div class="add-phone">
             <span class="input-group-addon"><i class="material-icons">phone</i></span>
             <input type="text" id="phone-number" name="phonenumber" placeholder="Téléphone" required />
@@ -86,7 +86,6 @@ function editProvider(obj) {
             <textarea name="description" id="description" placeholder="Description" required></textarea>
         </div>
     </form>
-
 
     app.appendChild(container)
     container.appendChild(line1)
