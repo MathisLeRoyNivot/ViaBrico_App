@@ -64,29 +64,28 @@ function editProvider(obj) {
     input5.textContent = originDescription;
 
 
-    <form class="add-form" method="POST" action="https://viabrico-api.herokuapp.com/fournisseurs/"></form>
+    <form class="add-form" method="POST" action="https://viabrico-api.herokuapp.com/fournisseurs/">
         <div class="add-name">
             <span class="input-group-addon"><i class="material-icons">person</i></span>
-            <input type="text" id="name" name="name" placeholder="Nom" required />
+            <input type="text" id="name" name="name" placeholder="Nom" required/>
         </div>
         <div class="add-email">
-            <span class="input-group-addon"><i class="material-icons">alternate_email</i></i></span>
-        <input type="email" id="email" name="email" placeholder="Email" required />
-            </div >
+            <span class="input-group-addon"><i class="material-icons">alternate_email</i></span>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+        </div >
         <div class="add-phone">
             <span class="input-group-addon"><i class="material-icons">phone</i></span>
             <input type="text" id="phone-number" name="phonenumber" placeholder="Téléphone" required />
         </div>
         <div class="add-address">
             <span class="input-group-addon"><i class="material-icons">place</i></span>
-            <input type="text" id="address" name="address" placeholder="Adresse" required />
+            <input type="text" id="address" name="address" placeholder="Adresse" required/>
         </div>
         <div class="add-description">
             <span class="input-group-addon"><i class="material-icons comment">comment</i></span>
             <textarea name="description" id="description" placeholder="Description" required></textarea>
         </div>
-
-    </form >
+    </form>
 
 
     app.appendChild(container)
