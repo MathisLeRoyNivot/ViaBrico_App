@@ -21,7 +21,7 @@ function editProvider(obj) {
 
     const form = document.createElement('form')
     form.setAttribute('class', 'edit-form')
-    form.setAttribute('method', 'PUT')
+    form.setAttribute('method', 'POST')
     form.setAttribute('action', `https://viabrico-api.herokuapp.com/providers/${originName}`)
 
     const line1 = document.createElement('div')
