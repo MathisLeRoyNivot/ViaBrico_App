@@ -18,8 +18,8 @@ Provider.createProvider = function createProvider(newProvider, result) {
             console.log("error: ", err);
             result(err, null);
         } else {
-            console.log(res.insertId);
-            result(null, res.insertId);
+            console.log(`New provider #${res.insertId} successfuly inserted`);
+            result(null, res.redirect('./list.html'));
         };
     });
 };
@@ -79,8 +79,6 @@ Provider.remove = function removeProvider(name, result) {
 
 
 //------------------------
-
-
 //User object constructor
 
 const User = function (user) {

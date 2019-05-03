@@ -16,8 +16,8 @@ function editProvider(obj) {
     reference.parentNode.removeChild(reference);
 
 
-    const container = document.createElement('div')
-    container.setAttribute('class', 'list-card')
+    const container = document.createElement('div');
+    container.setAttribute('class', 'list-card');
 
     const form = document.createElement('form')
     form.setAttribute('class', 'edit-form')
@@ -54,8 +54,8 @@ function editProvider(obj) {
     //button.setAttribute('onClick', 'sendEdit()')
     button.textContent = 'Valider'
 
-    const line2 = document.createElement('div')
-    line2.setAttribute('class', 'list-card-line2')
+    const line2 = document.createElement('div');
+    line2.setAttribute('class', 'list-card-line2');
 
     const input4 = document.createElement('input')
     input4.setAttribute('class', 'edit-address')
@@ -64,8 +64,8 @@ function editProvider(obj) {
     input4.setAttribute('placeholder', 'Adresse')
     input4.setAttribute('value', originAddress);
 
-    const line3 = document.createElement('div')
-    line3.setAttribute('class', 'list-card-line3')
+    const line3 = document.createElement('div');
+    line3.setAttribute('class', 'list-card-line3');
 
     const input5 = document.createElement('textarea')
     input5.setAttribute('class', 'edit-description')
@@ -73,7 +73,6 @@ function editProvider(obj) {
     input5.setAttribute('id', 'description')
     input5.setAttribute('placeholder', 'Description')
     input5.textContent = originDescription;
-
 
     app.appendChild(container)
     container.appendChild(form)
