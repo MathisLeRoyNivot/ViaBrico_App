@@ -6,7 +6,7 @@ To use the app, you have to install the `.apk` first.
 
 Login Page             |  Provider List Page
 :-------------------------:|:-------------------------:
-![Login](img/login.PNG)  |  ![Provider List](img/provider_list.PNG)
+![Login](img/login.png)  |  ![Provider List](img/provider_list.png)
 
 Edit Provider Page             |  Adding Provider Page
 :-------------------------:|:-------------------------:
