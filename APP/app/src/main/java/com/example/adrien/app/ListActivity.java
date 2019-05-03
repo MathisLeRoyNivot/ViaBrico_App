@@ -50,6 +50,8 @@ public class ListActivity extends Activity {
         button_logout = findViewById(R.id.button_logout);
 
         //OnClick Listeners on ImageButtons
+
+        //Add Provider Listener
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,6 +63,7 @@ public class ListActivity extends Activity {
             }
         });
 
+        //Logout Listener
         button_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

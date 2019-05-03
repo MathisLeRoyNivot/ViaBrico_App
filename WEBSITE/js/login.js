@@ -112,9 +112,8 @@ function connexion() {
     //Method post
     request.open('POST', "https://viabrico-api.herokuapp.com/users/", true);
     //Send request with data
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.setRequestHeader("Content-Type", "application/json");
     request.send(JSON.stringify({ "login": login, "password": passhash }));
-    alert("after send")
     request.addEventListener('readystatechange', function() {
         if (this.readyState == 4 && this.status == 200) {
             var myArr = JSON.parse(this.responseText);

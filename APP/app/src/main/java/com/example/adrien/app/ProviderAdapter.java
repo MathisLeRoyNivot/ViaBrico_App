@@ -113,7 +113,6 @@ public class ProviderAdapter extends RecyclerView.Adapter<ProviderAdapter.Provid
 
                         //Parameters
                         RequestParams requestParams = new RequestParams();
-                        //requestParams.put("name", providerList.get(getAdapterPosition()).getName());
 
                         //Call
                         client.delete("https://viabrico-api.herokuapp.com/providers/" + providerList.get(getAdapterPosition()).getName(), requestParams, new AsyncHttpResponseHandler() {
