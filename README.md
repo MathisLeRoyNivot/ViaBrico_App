@@ -14,4 +14,4 @@
 
 
 ## License 
-(MIT License)[https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/LICENSE]
+[MIT License](https://github.com/MathisLeRoyNivot/ViaBrico_App/blob/master/LICENSE)
