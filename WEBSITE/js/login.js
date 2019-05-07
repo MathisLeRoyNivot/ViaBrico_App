@@ -117,7 +117,7 @@ function connexion() {
             var responsejson = JSON.parse(this.responseText);
             if (responsejson.login && responsejson.password) {
                 console.log(responsejson);
-                window.location.replace("http://127.0.0.1:5500/WEBSITE/pages/list.html")
+                window.location.replace("./pages/list.html")
             }
             else {
                 alert("Identifiant/Mot de passe Incorrect")
